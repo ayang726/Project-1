@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Zip Code</label>
+                    <input class="form-control" id="zipCode" placeholder="Zip Code">
+                </div>
+                <button type="submit" id="zipCodeBtn" class="btn btn-primary">Submit</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="landmarkImage">
+                </div>
+                <p class="description">
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+
+
+        //landmarks API KEY: waiting for email response
+        //maps API KEY: AIzaSyAjzFephchFe1AGGX8akEIgufpyNfQwxuM
+        //pixabay API KEY: 12333577-c0ed2b653123ce628d4233f98
+
+
+        //function that gets the users current location
+        var userLoc = navigator.geolocation.getCurrentPosition(showPosition);
+        var latitude;
+        var longitude;
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            console.log(latitude);
+            console.log(longitude);
+        };
+
+
+
+        //if the user wants to opt to put in their location rather than have their location detected -- have not worked this out yet
+        $("#zipCodeBtn").on("click", function () {
+
+            var zipCode = $("#zipCode").val().trim();
+            console.log(zipCode);
+
+
+            // GECKOLANDMARKS api call that uses their long and lat coordinates to find landmarks near them(have not been given API key yet)
+            var queryURL1 = `http://api.geckolandmarks.com/json?lat=6.4304&lon=3.4293&user_id=TEST_USER&api_key=EXAMPLE_KEY_3edaba1953abf86`;
+
+            $.ajax({
+                url: queryURL1,
+                method: 'GET',
+                crossDomain: true,
+                dataType: 'jsonp',
+            }).then(function (response) {
+                console.log(response);
+
+
+            });
+
+
+
+            var landmarkName = "Boston Common"
+            var queryURL2 = `https://pixabay.com/api/?key=12333577-c0ed2b653123ce628d4233f98&q=${landmarkName}&image_type=photo`;
+
+            //PIXABAY API api call that gets an image from pixabay website
+            $.ajax({
+                url: queryURL2,
+                method: "GET"
+            }).then(function (response) {
+                console.log(response);
+
+                var landmarkImage = response.hits[0].largeImageURL;
+                console.log(landmarkImage);
+                $(".landmarkImage").prepend(`<img src=${landmarkImage}>`);
+
+
+            });
+
+
+            var queryURL3 = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&redirects=1&titles=Boston_Common`;
+
+            //WIKI API api call that gets a summary from wikipedia
+            $.ajax({
+                url: queryURL3,
+                method: "GET",
+                data: {
+                    format: 'json'
+                },
+                dataType: 'jsonp'
+            }).then(function (response) {
+                console.log(response);
+
+                //work around to parsing & accessing the wiki API object
+                var pagesKeys = Object.keys(response.query.pages);
+                console.log(pagesKeys);
+                var index = pagesKeys[0];
+                console.log(index);
+                var description = response.query.pages[index].extract;
+                $(".description").prepend(`<p>${description}</p>`);
+
+            });
+
+            var queryURL4 = `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=AIzaSyAjzFephchFe1AGGX8akEIgufpyNfQwxuM`;
+
+            //GOOGLE MAPS api call that gets longitude and latitude from zip code - maps keeps maxing out on "daily quota"
+            $.ajax({
+                url: queryURL4,
+                method: "GET"
+            }).then(function (response) {
+                console.log(response);
+
+                var mapsLat = response.results[0].geometry.location.lat;
+                var mapsLong = response.results[0].geometry.location.lng;
+                console.log(mapsLat);
+                console.log(mapsLong);
+
+            });
+
+            var queryURL5 = ` https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=1500&type=establishment&key=AIzaSyAjzFephchFe1AGGX8akEIgufpyNfQwxuM`;
+
+            //GOOGLE MAPS api call that should get "establishments" nearby (need to refine this search), has not worked succesfully because I keep meeting my daily quota???
+            $.ajax({
+                url: queryURL5,
+                method: "GET",
+            }).then(function (response) {
+                console.log(response);
+
+            });
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
