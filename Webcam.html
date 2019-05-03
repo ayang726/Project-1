@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <video autoplay></video>
+                <video id="save"></video>
+                <p><button id="start">Start</button>
+                    <p><button id="stop">Stop</button></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        function hasGetUserMedia() {
+            return !!(navigator.mediaDevices &&
+                navigator.mediaDevices.getUserMedia);
+        }
+
+        if (hasGetUserMedia()) {
+        } else {
+            alert('getUserMedia() is not supported by your browser');
+        }
+
+        const constraints = {
+            video: true
+        };
+
+        const video = document.querySelector('video');
+
+        navigator.mediaDevices.getUserMedia(constraints).
+            then((stream) => { video.srcObject = stream });
+
+        const hdConstraints = {
+            video: { width: { min: 1280 }, height: { min: 720 } }
+        };
+
+        navigator.mediaDevices.getUserMedia(hdConstraints).
+            then((stream) => { video.srcObject = stream });
+
+
+        const vgaConstraints = {
+            video: { width: { exact: 640 }, height: { exact: 480 } }
+        };
+
+        // navigator.mediaDevices.getUserMedia(vgaConstraints).
+        //     then((stream) => { video.srcObject = stream });
+
+        // let mediaRecorder = new MediaRecorder(stream);
+        // let savedVideo = [];
+
+
+
+        $("#start").on("click", function () {
+            mediaRecorder.start();
+
+        });
+
+
+        $("#stop").on("click", function () {
+            mediaRecorder.stop();
+
+        });
+
+        mediaRecorder.ondataavailable = function (ev) {
+            savedVideo.push(ev.data);
+        }
+        mediaRecorder.onstop = (ev) => {
+            let newVideo = new Blob(savedVideo, { 'type': 'video/mp4;' });
+            savedVideo = [];
+            let videoURL = window.URL.createObjectURL(newVideo);
+            vidSave.src = videoURL;
+
+        }
+
+
+
+
+        //store the mp3 file in the firebase DB
+
+
+
+
+    </script>
+
+</body>
+
+</html>
