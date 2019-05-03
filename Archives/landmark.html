@@ -52,6 +52,7 @@
         var userLoc = navigator.geolocation.getCurrentPosition(showPosition);
         var latitude;
         var longitude;
+        var newvariable;
 
         function showPosition(position) {
             latitude = position.coords.latitude;
@@ -77,10 +78,7 @@
                 method: 'GET',
                 crossDomain: true,
                 dataType: 'jsonp',
-            }).then(function (response) {
-                console.log(response);
-
-
+                success: function (s) { console.log("alex:" + s) }
             });
 
 
