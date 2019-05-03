@@ -78,10 +78,7 @@
                 method: 'GET',
                 crossDomain: true,
                 dataType: 'jsonp',
-            }).then(function (response) {
-                console.log(response);
-
-
+                success: function (s) { console.log("alex:" + s) }
             });
 
 
