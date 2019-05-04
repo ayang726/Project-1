@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Congrats</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/congratulate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body style="background-color: lightgoldenrodyellow">
+    <center>
+        <button class="button" style="margin:10px" style="padding:20px" border-color: red background-color 5em;
+            goldenrod" onclick="doAction()" ;><span class="it"><b>You made it!😃 Click to congratulate.</b></span></button>
+        <div id="gifid"></div>
+    </center>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function doAction() {
+            $(".button").hide();
+            celebrate();
+            playSound();
+        }
+
+
+        // Function to run when the button is clicked
+        function celebrate() {
+
+            var queryURL = "https://api.tenor.com/v1/search?q=minions&key=B3RT5ZFYTZ7W&limit=20";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET",
+                dataType: "json"
+            }).then(function (response) {
+                var celeb = response.results[1].media[0].gif.url;
+                //var celeb = response.results.media;
+                console.log(celeb);
+                //var celebs = [];
+                //var randomCeleb = getRandomArrayElement(celebs);
+
+                $("#gifid").html(`<img src="${celeb}" style="margin-top:10px"; height = '900' width = '900' />`);
+            });
+        };
+
+        function playSound() {
+            var audioElement = document.createElement("audio");
+            audioElement.setAttribute("src", "./js/clap-mp3.mp3");
+            audioElement.play();
+        };
+
+
+    </script>
+</body>
+
+</html>
