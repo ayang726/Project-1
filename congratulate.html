@@ -6,15 +6,14 @@
     <title>Congrats</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/congratulate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 
 <body style="background-color: lightgoldenrodyellow">
-    <center>
-        <button class="button" style="margin:10px" style="padding:20px" border-color: red background-color 5em;
-            goldenrod" onclick="doAction()" ;><span class="it"><b>You made it!😃 Click to congratulate.</b></span></button>
-        <div id="gifid"></div>
-    </center>
+    <button class="button" style="margin:10px" style="padding:20px" border-color: red background-color 5em; goldenrod"
+        onclick="doAction()" ;><span class="it"><b>You made it!😃 Click to congratulate.</b></span></button>
+    <div id="congrats-display"></div>
 
 
     </div>
@@ -45,7 +44,7 @@
                 //var celebs = [];
                 //var randomCeleb = getRandomArrayElement(celebs);
 
-                $("#gifid").html(`<img src="${celeb}" style="margin-top:10px"; height = '900' width = '900' />`);
+                $("#gifid").html(`<img src="${celeb}" style="margin-top:10px"; height = '500' width = '300  ' />`);
             });
         };
 
