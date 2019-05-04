@@ -42,19 +42,32 @@
 
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <div class="container">
-                        <h4>Exercise 1</h4>
-                        <iframe width="500" height="300"
-                            src="https://www.youtube.com/embed/HUS3M0chi6I?list=PLDR1CNxZ9OBaLeTNWGWZQPxOIXgmH4nIc"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen id="videoframe"></iframe>
-                        <div id="congrats-display"></div>
-                        <button class="waves-effect waves-light blue accent-3 btn-large"><i class="material-icons right"
-                                id="now-you">play_arrow</i>NOW YOU!</button>
-                        <button onclick="congratulate()" class="waves-effect waves-light blue accent-3 btn-large"><i
-                                class="material-icons right" id="complete">check</i>Complete!</button>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <h4>Exercise 1</h4>
+                                <iframe width="500" height="300"
+                                    src="https://www.youtube.com/embed/HUS3M0chi6I?list=PLDR1CNxZ9OBaLeTNWGWZQPxOIXgmH4nIc"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen id="videoframe"></iframe>
+
+                            </li>
+                            <li id="video">
+                                <video id="videodisplay" autoplay></video>
+                            </li>
+                            <li>
+                                <div id="congrats-display"></div>
+                            </li>
+                        </ul>
                     </div>
+
+                    <div id="congrats-display"></div>
+
+                    <button class="waves-effect waves-light blue accent-3 btn-large"><i class="material-icons right"
+                            id="now-you">play_arrow</i>NOW YOU!</button>
+                    <button onclick="congratulate()" class="waves-effect waves-light blue accent-3 btn-large"><i
+                            class="material-icons right" id="complete">check</i>Complete!</button>
                 </div>
             </div>
 
@@ -170,6 +183,7 @@
     <!-- <script src="js/init.js"></script> -->
     <script src="js/modal.js"></script>
     <script src="js/congrats.js"></script>
+    <script src="js/webcam.js"></script>
 </body>
 
 </html>
