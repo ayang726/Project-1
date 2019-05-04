@@ -24,8 +24,7 @@
 
 
             <div class="row right" class="right hide-on-med-and-down">
-                <a href="Useful-Code-Snippets/SigninAuth.html" id="download-button"
-                    class="btn-large waves-effect waves-light orange">User
+                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange">User
                     Login</a>
             </div>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -41,8 +40,23 @@
     <div class="container">
         <div class="section">
 
-            <!--   Video Thumbnails Section   -->
-
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="container">
+                        <h4>Exercise 1</h4>
+                        <iframe width="500" height="300"
+                            src="https://www.youtube.com/embed/HUS3M0chi6I?list=PLDR1CNxZ9OBaLeTNWGWZQPxOIXgmH4nIc"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen id="videoframe"></iframe>
+                        <div id="congrats-display"></div>
+                        <button class="waves-effect waves-light blue accent-3 btn-large"><i class="material-icons right"
+                                id="now-you">play_arrow</i>NOW YOU!</button>
+                        <button onclick="congratulate()" class="waves-effect waves-light blue accent-3 btn-large"><i
+                                class="material-icons right" id="complete">check</i>Complete!</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col s6 m4">
@@ -50,8 +64,8 @@
                         <div class="card-image">
                             <img src="http://i3.ytimg.com/vi/9c7kKN-rhTU/maxresdefault.jpg">
                             <span class="card-title">Warmup</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                    class="material-icons">video_call</i></a>
+                            <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                                id="exercise01" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
                         <div class="card-content">
                             <p>Let's start todays session with some warmup stretches!</p>
@@ -63,8 +77,8 @@
                         <div class="card-image">
                             <img src="Assets/Images/CircuitTraining.jpg">
                             <span class="card-title">Warmup</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                    class="material-icons">video_call</i></a>
+                            <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                                id="exercise02" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
                         <div class="card-content">
                             <p>Let's start todays session with some warmup stretches!</p>
@@ -76,8 +90,8 @@
                         <div class="card-image">
                             <img src="Assets/Images/CircuitTraining.jpg">
                             <span class="card-title">Warmup</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                    class="material-icons">video_call</i></a>
+                            <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                                id="exercise03" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
                         <div class="card-content">
                             <p>Let's start todays session with some warmup stretches!</p>
@@ -92,8 +106,8 @@
                     <div class="card-image">
                         <img src="Assets/Images/CircuitTraining.jpg">
                         <span class="card-title">Warmup</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                class="material-icons">video_call</i></a>
+                        <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                            id="exercise04" data-target="modal"><i class="material-icons">video_call</i></button>
                     </div>
                     <div class="card-content">
                         <p>Let's start todays session with some warmup stretches!</p>
@@ -105,8 +119,8 @@
                     <div class="card-image">
                         <img src="Assets/Images/CircuitTraining.jpg">
                         <span class="card-title">Warmup</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                class="material-icons">video_call</i></a>
+                        <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                            id="exercise05" data-target="modal"><i class="material-icons">video_call</i></button>
                     </div>
                     <div class="card-content">
                         <p>Let's start todays session with some warmup stretches!</p>
@@ -118,8 +132,8 @@
                     <div class="card-image">
                         <img src="Assets/Images/CircuitTraining.jpg">
                         <span class="card-title">Warmup</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                class="material-icons">video_call</i></a>
+                        <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                            id="exercise06" data-target="modal"><i class="material-icons">video_call</i></button>
                     </div>
                     <div class="card-content">
                         <p>Let's start todays session with some warmup stretches!</p>
@@ -153,8 +167,9 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-
+    <!-- <script src="js/init.js"></script> -->
+    <script src="js/modal.js"></script>
+    <script src="js/congrats.js"></script>
 </body>
 
 </html>
