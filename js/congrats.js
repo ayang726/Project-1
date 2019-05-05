@@ -4,24 +4,35 @@ function congratulate() {
     playSound();
 }
 
-
 // Function to run when the button is clicked
 function celebrate() {
+    var api_key = "IXHrCW7HbVSkilRoks118mHFZJi08MKa";
+    var rating = "g";
+    var offset = 10;
+    var limit = 1;
+    var q = randomQuery;
+    var randomQ = ["minion", "disney", "happy", "kid", "clapping", "balloons", "dance", "party", "celebrate", "cartoons", "hooray"];
+    var randomQuery = getRandomArrayElement(randomQ);
 
-    var queryURL = "https://api.tenor.com/v1/search?q=minions&key=B3RT5ZFYTZ7W&limit=20";
+    function getRandomArrayElement(randomQ) {
+        var min = 0;
+        var max = (randomQ.length - 1);
+        var randIndex = Math.floor(Math.random() * (max - min)) + min;
+        return randomQ[randIndex];
+    };
+
+
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + randomQuery + "&api_key=" + api_key + "&limit=" + limit + "&rating=" + rating + "&offset=" + offset;
+
 
     $.ajax({
         url: queryURL,
         method: "GET",
         dataType: "json"
     }).then(function (response) {
-        var celeb = response.results[1].media[0].gif.url;
-        //var celeb = response.results.media;
-        console.log(celeb);
-        //var celebs = [];
-        //var randomCeleb = getRandomArrayElement(celebs);
+        var celeb = response.data[0].images.original.url;
 
-        $("#congrats-display").html(`<img src="${celeb}" style="margin-top:10px"; />`);
+        $("#congrats-display").html(`<img src="${celeb}" style="margin-top:10px"; width="400px" height="200px" />`);
     });
 };
 
