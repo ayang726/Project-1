@@ -15,7 +15,7 @@ function dismissingModal() {
 
 function openModal() {
     // pass in child's name and exercise name in startRecording(childName, exerciseName)
-    startRecording();
+    // startRecording();
     slideToPage(0);
 }
 
@@ -25,8 +25,16 @@ $(".choose-exercise-btn").on("click", function () {
         onCloseEnd: dismissingModal,
         onOpenStart: openModal
     });
-    //here the id of the specific video will be loaded.
 
+    var name = "lindsey";
+    var exercise = $(this).attr("data-name");
+
+    console.log("I'm called. msg-120");
+    console.log(name);
+    console.log(exercise);
+    startRecording(name, exercise);
+
+    //here the id of the specific video will be loaded.
     var videoId = $(this).attr("data-video");
     // console.log("msg-110");
     // console.log(videoId);

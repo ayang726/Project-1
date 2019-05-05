@@ -68,7 +68,8 @@ if (!navigator.mediaDevices.getUserMedia) {
 
 
 // Clicking Record button
-function startRecording(childName = "alex", exerciseName = "Clap") {
+function startRecording(childName, exerciseName) {
+
     if (localStream == null) {
         alert('Could not get local stream from mic/camera');
     } else {
@@ -78,6 +79,9 @@ function startRecording(childName = "alex", exerciseName = "Clap") {
 
         /* use the stream */
         console.log('Start recording...');
+        console.log(childName);
+        console.log(exerciseName);
+
         if (typeof MediaRecorder.isTypeSupported == 'function') {
 			/*
 				MediaRecorder.isTypeSupported is a function announced in https://developers.google.com/web/updates/2016/01/mediarecorder and later introduced in the MediaRecorder API spec http://www.w3.org/TR/mediastream-recording/
@@ -132,7 +136,7 @@ function startRecording(childName = "alex", exerciseName = "Clap") {
             // downloadLink.innerHTML = 'Click here to download your video!';
             // should change this to track time
             var rand = Math.floor((Math.random() * 10000000));
-            var name = childName + "-" + exerciseName + rand + ".webm";
+            var name = childName + "-" + exerciseName + "-" + rand + ".webm";
             // videoElement.srcObject = null;
             // videoElement.src = videoURL + "/" + name;
 
