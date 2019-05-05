@@ -1,6 +1,12 @@
+// slider initializer
 var elems = document.querySelector('#slider');
 var slider = M.Slider.init(elems, { interval: 9999999, height: 350 });
 slider.pause();
+// modal initializer
+$('#modal').modal({
+    onCloseEnd: dismissingModal,
+    onOpenStart: openModal
+});
 
 
 function dismissingModal() {
@@ -21,12 +27,9 @@ function openModal() {
 
 $(".choose-exercise-btn").on("click", function () {
     console.log("choose exercise btn click");
-    $('#modal').modal({
-        onCloseEnd: dismissingModal,
-        onOpenStart: openModal
-    });
 
-    var name = "lindsey";
+
+    var name = currentUser.displayName.trim().replace(" ", "-");
     var exercise = $(this).attr("data-name");
 
     console.log("I'm called. msg-120");
