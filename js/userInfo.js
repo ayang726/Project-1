@@ -1,4 +1,9 @@
-var currentUser = {};
+var currentUser = {
+    displayName: "",
+    email: "",
+    uid: "",
+    videoList: []
+};
 
 $(document).ready(function () {
     firebase.auth().onAuthStateChanged(function (user) {
