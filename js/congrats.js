@@ -2,6 +2,7 @@ var audioElement = document.createElement("audio");
 
 function congratulate() {
     // $("#videoframe").hide();
+
     celebrate();
     playSound();
 }
@@ -34,7 +35,7 @@ function celebrate() {
     }).then(function (response) {
         var celeb = response.data[0].images.original.url;
 
-        $("#congrats-display").html(`<img src="${celeb}" style="margin-top:10px"; width="400px" height="200px" />`);
+        $("#congrats-display").html(`<img src="${celeb}" style="margin-top:10px"; width="100%" height="100%" />`);
     });
 };
 

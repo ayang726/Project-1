@@ -136,7 +136,7 @@ function startRecording(childName = "alex", exerciseName = "Clap") {
             // videoElement.srcObject = null;
             // videoElement.src = videoURL + "/" + name;
 
-            name = "example.webm";
+            // name = "example.webm";
             storeRef.child("/video/" + name).put(blob);
 
             console.log(videoElement.src);
@@ -185,10 +185,11 @@ navigator.mediaDevices.ondevicechange = function (event) {
 function stopRecording() {
     console.log("Complete button clicked");
     mediaRecorder.stop();
-    console.log("stop mediarecorder again");
-    mediaRecorder = null;
-    slider.next();
-    slider.pause();
+    // console.log("stop mediarecorder again");
+    // mediaRecorder = null;
+    slideToPage(2);
+    // slider.next();
+    // slider.pause();
     celebrate();
     playSound();
 
