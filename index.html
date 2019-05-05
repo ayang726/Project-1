@@ -24,7 +24,7 @@
 
 
             <div class="row right" class="right hide-on-med-and-down">
-                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange">User
+                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange" id="login-btn">User
                     Login</a>
             </div>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -96,20 +96,15 @@
 
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <!-- <script src="js/init.js"></script> -->
-    <script src="js/congrats.js"></script>
-    <script src="js/generateExcersizeTabs.js"></script>
-    <script src="./js/record.js"></script>
-    <script src="js/modal.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- <video controls id="anotherVideo"></video> -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-storage.js"></script>
-
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-storage.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -130,7 +125,17 @@
 
         var storage = firebase.storage();
         var storeRef = storage.ref();
+        var database = firebase.database();
     </script>
+    <script src="js/userInfo.js"></script>
+    <script src="js/materialize.js"></script>
+    <!-- <script src="js/init.js"></script> -->
+    <script src="js/congrats.js"></script>
+    <script src="js/generateExcersizeTabs.js"></script>
+    <script src="./js/record.js"></script>
+    <script src="js/modal.js"></script>
+
+
 
 </body>
 

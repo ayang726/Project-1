@@ -142,8 +142,9 @@ function startRecording(childName, exerciseName) {
 
             // name = "example.webm";
             storeRef.child("/video/" + name).put(blob);
-
-            console.log(videoElement.src);
+            // push video name to child's videoList
+            database.ref("/users/" + currentUser.uid + "/videoList").push(name);
+            // console.log(videoElement.src);
             // downloadLink.setAttribute("download", name);
             // downloadLink.setAttribute("name", name);
         };
