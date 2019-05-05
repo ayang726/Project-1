@@ -17,7 +17,7 @@ $(document).ready(function () {
             database.ref("/users/" + currentUser.uid + "/videoList").on("value", function (s) {
                 if (s.exists()) {
                     s.forEach(videoName => {
-                        currentUser.videoList.push(videoName);
+                        currentUser.videoList.push(videoName.val());
                     });
                     console.log("msg-139: VideoUrls updated" + currentUser);
                 }
