@@ -256,3 +256,13 @@ function getBrowser() {
 
     return browserName;
 }
+
+let storageRef = storage.ref('video').child("example.webm");
+console.log(storageRef);
+let URL = storageRef.getDownloadURL();
+console.log(URL);
+
+URL.then(function (url) {
+    console.log(url);
+    $("#anotherVideo").html(`<source src="${url}" type="video/mp4"></source>`);
+});
