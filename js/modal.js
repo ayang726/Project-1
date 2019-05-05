@@ -17,12 +17,16 @@ function openModal() {
 }
 
 $(".choose-exercise-btn").on("click", function () {
+    console.log("choose exercise btn click");
     $('#modal').modal({
         onCloseEnd: dismissingModal,
         onOpenStart: openModal
     });
     //here the id of the specific video will be loaded.
-    var videoId = "HUS3M0chi6I"
+
+    var videoId = $(this).attr("data-video");
+    console.log("msg-110");
+    console.log(videoId);
     player.cueVideoById({ videoId: videoId })
 
 });
