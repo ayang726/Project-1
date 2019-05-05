@@ -42,15 +42,17 @@
 
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <div class="slider">
+                    <div class="slider" id="slider">
                         <ul class="slides">
                             <li>
                                 <!-- <h4>Exercise 1</h4> -->
-                                <iframe width="800" height="400"
-                                    src="https://www.youtube.com/embed/HUS3M0chi6I?list=PLDR1CNxZ9OBaLeTNWGWZQPxOIXgmH4nIc"
+                                <div id="youtube-player">
+
+                                </div>
+                                <!-- <iframe width="800" height="400" src="https://www.youtube.com/embed/HUS3M0chi6I"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen id="videoframe"></iframe>
+                                    allowfullscreen id="videoframe"></iframe> -->
 
                             </li>
                             <li id="video">
@@ -65,7 +67,7 @@
                     <div id="congrats-display"></div>
                     <button class="waves-effect waves-light blue accent-3 btn-large"><i class="material-icons right"
                             id="now-you">play_arrow</i>NOW YOU!</button>
-                    <button onclick="onBtnStopClicked()" class="waves-effect waves-light blue accent-3 btn-large"
+                    <button onclick="stopRecording()" class="waves-effect waves-light blue accent-3 btn-large"
                         id="stop"><i class="material-icons right" id="complete">check</i>Complete!</button>
                 </div>
             </div>
@@ -101,12 +103,10 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <!-- <script src="js/init.js"></script> -->
-    <script src="js/modal.js"></script>
     <script src="js/congrats.js"></script>
-    <script src="js/webcam.js"></script>
     <script src="js/generateExcersizeTabs.js"></script>
-<script src="./js/record.js"></script>
-
+    <script src="./js/record.js"></script>
+    <script src="js/modal.js"></script>
 
     <!-- <video controls id="anotherVideo"></video> -->
 
@@ -120,13 +120,13 @@
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
-            apiKey: "AIzaSyBNBdNhl-_z2vGoHdtdPEkpKRvQ5ID5MdM",
-            authDomain: "nowyou-recordedvideos.firebaseapp.com",
-            databaseURL: "https://nowyou-recordedvideos.firebaseio.com",
-            projectId: "nowyou-recordedvideos",
-            storageBucket: "nowyou-recordedvideos.appspot.com",
-            messagingSenderId: "508680410714",
-            appId: "1:508680410714:web:f41877e47f46ca92"
+            apiKey: "AIzaSyCWUynieHBs00mL9wAydWO3nsMOsGVX-R8",
+            authDomain: "click-counter-harcam-3178e.firebaseapp.com",
+            databaseURL: "https://click-counter-harcam-3178e.firebaseio.com",
+            projectId: "click-counter-harcam-3178e",
+            storageBucket: "click-counter-harcam-3178e.appspot.com",
+            messagingSenderId: "672151007179",
+            appId: "1:672151007179:web:dd623268f38a2ed2"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);

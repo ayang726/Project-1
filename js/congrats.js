@@ -1,5 +1,7 @@
+var audioElement = document.createElement("audio");
+
 function congratulate() {
-    $("#videoframe").hide();
+    // $("#videoframe").hide();
     celebrate();
     playSound();
 }
@@ -37,7 +39,12 @@ function celebrate() {
 };
 
 function playSound() {
-    var audioElement = document.createElement("audio");
+
     audioElement.setAttribute("src", "./js/clap-mp3.mp3");
     audioElement.play();
 };
+
+function stopSound() {
+    console.log("sound paused");
+    audioElement.pause();
+}

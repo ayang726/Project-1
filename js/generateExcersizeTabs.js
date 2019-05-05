@@ -1,12 +1,12 @@
 var generateExerciseCards = {
 
     exerciseName: {
-        1: 'Touch Cheeks',
+        1: 'Touch-Cheeks',
         2: 'Clap',
-        3: 'Touch Head',
+        3: 'Touch-Head',
         4: 'Hug',
-        5: 'Touch Nose',
-        6: 'Touch Shoulders',
+        5: 'Touch-Nose',
+        6: 'Touch-Shoulders',
     },
 
     thumbnail: {
@@ -19,12 +19,12 @@ var generateExerciseCards = {
     },
 
     video: {
-        1: 'https://youtu.be/HUS3M0chi6I',
-        2: 'https://youtu.be/ttJ5or1fCZk',
-        3: 'https://youtu.be/9c7kKN-rhTU',
-        4: 'https://youtu.be/vkpYWtJdD3E',
-        5: 'https://youtu.be/CSBc9s4gvWU',
-        6: 'https://youtu.be/TIW-83Xfmog',
+        1: 'HUS3M0chi6I',
+        2: 'ttJ5or1fCZk',
+        3: '9c7kKN-rhTU',
+        4: 'vkpYWtJdD3E',
+        5: 'CSBc9s4gvWU',
+        6: 'TIW-83Xfmog',
     },
 
 
@@ -37,8 +37,8 @@ for (var i = 0; i < Object.keys(generateExerciseCards.exerciseName).length; i++)
                     <div class="card">
                         <div class="card-image">
                             <img src="${Object.values(generateExerciseCards.thumbnail)[i]}">
-                            <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"
-                                id="exercise02" data-name="${Object.values(generateExerciseCards.exerciseName)[i]}" data-video="${Object.values(generateExerciseCards.video)[i]}data-target="modal"><i class="material-icons">video_call</i></button>
+                            <button class="choose-exercise-btn modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                                 data-name="${Object.values(generateExerciseCards.exerciseName)[i]}" data-video="${Object.values(generateExerciseCards.video)[i]}" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
                         <div class="card-content">
                             <p>${Object.values(generateExerciseCards.exerciseName)[i]}</p>
