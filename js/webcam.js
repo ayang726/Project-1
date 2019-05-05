@@ -1,32 +1,36 @@
 $('.slider').slider();
+$('.slider').slider('pause');
+$('.indicator-item').on('click', function () {
+    $('.slider').slider('pause');
+});
 
-function hasGetUserMedia() {
-    return !!(navigator.mediaDevices &&
-        navigator.mediaDevices.getUserMedia);
-}
+// function hasGetUserMedia() {
+//     return !!(navigator.mediaDevices &&
+//         navigator.mediaDevices.getUserMedia);
+// }
 
-if (hasGetUserMedia()) {
-} else {
-    alert('getUserMedia() is not supported by your browser');
-}
+// if (hasGetUserMedia()) {
+// } else {
+//     alert('getUserMedia() is not supported by your browser');
+// }
 
-const constraints = {
-    video: true
-};
+// const constraints = {
+//     video: true
+// };
 
-const video = document.querySelector('#videodisplay');
+// const video = document.querySelector('#videodisplay');
 
-navigator.mediaDevices.getUserMedia(constraints).
-    then((stream) => { video.srcObject = stream });
+// navigator.mediaDevices.getUserMedia(constraints).
+//     then((stream) => { video.srcObject = stream });
 
-const hdConstraints = {
-    video: { width: { min: 1280 }, height: { min: 720 } }
-};
+// const hdConstraints = {
+//     video: { width: { min: 1280 }, height: { min: 720 } }
+// };
 
-navigator.mediaDevices.getUserMedia(hdConstraints).
-    then((stream) => { video.srcObject = stream });
+// navigator.mediaDevices.getUserMedia(hdConstraints).
+//     then((stream) => { video.srcObject = stream });
 
 
-const vgaConstraints = {
-    video: { width: { exact: 640 }, height: { exact: 480 } }
-};
+// const vgaConstraints = {
+//     video: { width: { exact: 640 }, height: { exact: 480 } }
+// };
