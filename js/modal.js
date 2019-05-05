@@ -1,32 +1,40 @@
-
 var elems = document.querySelector('#slider');
-var slider = M.Slider.init(elems, {});
+var slider = M.Slider.init(elems, { interval: 9999999 });
 slider.pause();
+
 
 function dismissingModal() {
     stopSound();
+    stopRecording();
+    //on modal complete
+    //pause sound
+    //upload video
+}
+
+function openModal() {
+    // pass in child's name and exercise name in startRecording(childName, exerciseName)
+    startRecording();
 }
 
 $(".choose-exercise-btn").on("click", function () {
     $('#modal').modal({
-        onCloseEnd: dismissingModal
-        //on modal complete
-        //pause sound
-        //upload video
+        onCloseEnd: dismissingModal,
+        onOpenStart: openModal
     });
     //here the id of the specific video will be loaded.
     var videoId = "HUS3M0chi6I"
-    player.loadVideoById({ videoId: videoId })
+    player.cueVideoById({ videoId: videoId })
 
 });
 
 // to be replaced by choose-exercise-btn
 $("#exercise01").on("click", function () {
     $('#modal').modal({
-        onCloseEnd: dismissingModal
+        onCloseEnd: dismissingModal,
+        onOpenStart: openModal
     });
     var videoId = "HUS3M0chi6I"
-    player.loadVideoById({ videoId: videoId })
+    player.cueVideoById({ videoId: videoId })
 });
 
 $("#exercise02").on("click", function () {
@@ -76,7 +84,7 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-    event.target.playVideo();
+    // event.target.playVideo();
 }
 
 // 5. The API calls this function when the player's state changes.

@@ -1,7 +1,7 @@
 var audioElement = document.createElement("audio");
 
 function congratulate() {
-    $("#videoframe").hide();
+    // $("#videoframe").hide();
     celebrate();
     playSound();
 }

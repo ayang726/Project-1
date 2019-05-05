@@ -66,8 +66,9 @@ if (!navigator.mediaDevices.getUserMedia) {
     }
 }
 
+
 // Clicking Record button
-function onBtnRecordClicked() {
+function startRecording(childName = "alex", exerciseName = "Clap") {
     if (localStream == null) {
         alert('Could not get local stream from mic/camera');
     } else {
@@ -126,21 +127,21 @@ function onBtnRecordClicked() {
 
             console.log("Recorded video is at: " + videoURL);
             // here we hijack the code and write upload function. to save in child's profile
-            downloadLink.href = videoURL;
+            // downloadLink.href = videoURL;
 
-            downloadLink.innerHTML = 'Click here to download your video!';
+            // downloadLink.innerHTML = 'Click here to download your video!';
             // should change this to track time
             var rand = Math.floor((Math.random() * 10000000));
-            var name = "video_" + rand + ".webm";
+            var name = childName + "-" + exerciseName + rand + ".webm";
             // videoElement.srcObject = null;
-            videoElement.src = videoURL + "/" + name;
+            // videoElement.src = videoURL + "/" + name;
 
             name = "example.webm";
             storeRef.child("/video/" + name).put(blob);
 
             console.log(videoElement.src);
-            downloadLink.setAttribute("download", name);
-            downloadLink.setAttribute("name", name);
+            // downloadLink.setAttribute("download", name);
+            // downloadLink.setAttribute("name", name);
         };
 
         // mediaRecorder.onpause = function () {
@@ -181,114 +182,17 @@ navigator.mediaDevices.ondevicechange = function (event) {
 	*/
 }
 
-function onBtnPlayClicked() {
-    videoElement.play();
-}
-
-function onBtnStopClicked() {
-    console.log("stop clicked");
+function stopRecording() {
+    console.log("Complete button clicked");
     mediaRecorder.stop();
-    $("#videoframe").hide();
+    console.log("stop mediarecorder again");
+    mediaRecorder = null;
+    slider.next();
+    slider.pause();
     celebrate();
     playSound();
-    // videoElement.controls = true;
-    // playBtn.disabled = false;
-    // recBtn.disabled = false;
-    // pauseResBtn.disabled = true;
-    // stopBtn.disabled = true;
-
-    // on stop recording, stop the camera feed back;
-    // videoElement.pause();
-    // Load the recorded video
 
 }
-
-// function onPauseResumeClicked() {
-//     if (pauseResBtn.textContent === "Pause") {
-//         pauseResBtn.textContent = "Resume";
-//         mediaRecorder.pause();
-//         stopBtn.disabled = true;
-//     } else {
-//         pauseResBtn.textContent = "Pause";
-//         mediaRecorder.resume();
-//         stopBtn.disabled = false;
-//     }
-//     recBtn.disabled = true;
-//     pauseResBtn.disabled = false;
-// }
-
-// function onStateClicked() {
-
-//     if (mediaRecorder != null && localStream != null && soundMeter != null) {
-//         console.log("mediaRecorder.state=" + mediaRecorder.state);
-//         console.log("mediaRecorder.mimeType=" + mediaRecorder.mimeType);
-//         console.log("mediaRecorder.videoBitsPerSecond=" + mediaRecorder.videoBitsPerSecond);
-
-//         localStream.getTracks().forEach(function (track) {
-//             if (track.kind == "video") {
-//                 console.log("Video: track.readyState=" + track.readyState + ", track.muted=" + track.muted);
-//             }
-//         });
-//     }
-
-// }
-
-// function log(message) {
-//     dataElement.innerHTML = dataElement.innerHTML + '<br>' + message;
-//     console.log(message)
-// }
-
-// // Meter class that generates a number correlated to audio volume.
-// // The meter class itself displays nothing, but it makes the
-// // instantaneous and time-decaying volumes available for inspection.
-// // It also reports on the fraction of samples that were at or near
-// // the top of the measurement range.
-// function SoundMeter(context) {
-//     this.context = context;
-//     this.instant = 0.0;
-//     this.slow = 0.0;
-//     this.clip = 0.0;
-//     this.script = context.createScriptProcessor(2048, 1, 1);
-//     var that = this;
-//     this.script.onaudioprocess = function (event) {
-//         var input = event.inputBuffer.getChannelData(0);
-//         var i;
-//         var sum = 0.0;
-//         var clipcount = 0;
-//         for (i = 0; i < input.length; ++i) {
-//             sum += input[i] * input[i];
-//             if (Math.abs(input[i]) > 0.99) {
-//                 clipcount += 1;
-//             }
-//         }
-//         that.instant = Math.sqrt(sum / input.length);
-//         that.slow = 0.95 * that.slow + 0.05 * that.instant;
-//         that.clip = clipcount / input.length;
-//     };
-// }
-
-// SoundMeter.prototype.connectToSource = function (stream, callback) {
-//     console.log('SoundMeter connecting');
-//     try {
-//         this.mic = this.context.createMediaStreamSource(stream);
-//         this.mic.connect(this.script);
-//         // necessary to make sample run, but should not be.
-//         this.script.connect(this.context.destination);
-//         if (typeof callback !== 'undefined') {
-//             callback(null);
-//         }
-//     } catch (e) {
-//         console.error(e);
-//         if (typeof callback !== 'undefined') {
-//             callback(e);
-//         }
-//     }
-// };
-// SoundMeter.prototype.stop = function () {
-//     this.mic.disconnect();
-//     this.script.disconnect();
-// };
-
 
 //browser ID
 function getBrowser() {
