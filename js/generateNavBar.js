@@ -1,7 +1,7 @@
 $("#navBar").append(`
 <nav class="indigo" role="navigation">
             <!-- site title -->
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="./index.html" class="brand-logo">NowYou!</a>
                 <!-- link to login page -->
 
 
@@ -12,7 +12,7 @@ $("#navBar").append(`
                         Login</a>
                 </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="./index.html"">Exercises</a></li>
+                    <li><a href="./index.html>Exercises</a></li>
                     <li><a href="./faqs.html">FAQ</a></li>
                     <li><a href="#">The Team</a></li>
                 </ul>
