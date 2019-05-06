@@ -1,5 +1,5 @@
 $("#navBar").append(`
-<nav class="deep-orange lighten-2" role="navigation">
+<nav class="indigo" role="navigation">
             <!-- site title -->
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
                 <!-- link to login page -->
