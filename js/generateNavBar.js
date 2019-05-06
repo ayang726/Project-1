@@ -12,7 +12,7 @@ $("#navBar").append(`
                         Login</a>
                 </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="./index.html>Exercises</a></li>
+                    <li><a href="./index.html">Exercises</a></li>
                     <li><a href="./faqs.html">FAQ</a></li>
                     <li><a href="#">The Team</a></li>
                 </ul>
