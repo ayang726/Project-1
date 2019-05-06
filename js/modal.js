@@ -1,11 +1,19 @@
+// slider initializer
 var elems = document.querySelector('#slider');
-var slider = M.Slider.init(elems, { interval: 9999999 });
+var slider = M.Slider.init(elems, { interval: 9999999, height: 350 });
 slider.pause();
+// modal initializer
+$('#modal').modal({
+    onCloseEnd: dismissingModal,
+    onOpenStart: openModal
+});
 
 
 function dismissingModal() {
+    if (mediaRecorder.state === "recording") {
+        mediaRecorder.stop();
+    }
     stopSound();
-    stopRecording();
     //on modal complete
     //pause sound
     //upload video
@@ -13,55 +21,34 @@ function dismissingModal() {
 
 function openModal() {
     // pass in child's name and exercise name in startRecording(childName, exerciseName)
-    startRecording();
+    // startRecording();
+    slideToPage(0);
 }
 
 $(".choose-exercise-btn").on("click", function () {
     console.log("choose exercise btn click");
-    $('#modal').modal({
-        onCloseEnd: dismissingModal,
-        onOpenStart: openModal
-    });
+
+
+    var name = currentUser.displayName.trim().replace(" ", "-");
+    var exercise = $(this).attr("data-name");
+
+    console.log("I'm called. msg-120");
+    console.log(name);
+    console.log(exercise);
+    startRecording(name, exercise);
+
     //here the id of the specific video will be loaded.
-
     var videoId = $(this).attr("data-video");
-    console.log("msg-110");
-    console.log(videoId);
+    // console.log("msg-110");
+    // console.log(videoId);
     player.cueVideoById({ videoId: videoId })
 
 });
 
-// to be replaced by choose-exercise-btn
-$("#exercise01").on("click", function () {
-    $('#modal').modal({
-        onCloseEnd: dismissingModal,
-        onOpenStart: openModal
-    });
-    var videoId = "HUS3M0chi6I"
-    player.cueVideoById({ videoId: videoId })
-});
-
-$("#exercise02").on("click", function () {
-    $('#modal').modal();
-});
-
-$("#exercise03").on("click", function () {
-    $('#modal').modal();
-});
-
-
-$("#exercise04").on("click", function () {
-    $('#modal').modal();
-});
-
-$("#exercise05").on("click", function () {
-    $('#modal').modal();
-});
-
-$("#exercise06").on("click", function () {
-    $('#modaL').modal();
-});
-
+// Slider functions
+function slideToPage(page) {
+    slider.set(page);
+}
 
 // youtube player
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -98,7 +85,9 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
         // console.log("video ended");
-        slider.next();
-        slider.pause();
+        slideToPage(1)
+        // slider.next();
+        // slider.pause();
     }
 }
+
