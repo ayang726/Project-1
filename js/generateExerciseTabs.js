@@ -37,10 +37,10 @@ for (var i = 0; i < Object.keys(generateExerciseCards.exerciseName).length; i++)
                     <div class="card">
                         <div class="card-image">
                             <img src="${Object.values(generateExerciseCards.thumbnail)[i]}">
-                            <button class="choose-exercise-btn modal-trigger btn-floating halfway-fab waves-effect waves-light red"
+                            <button class="choose-exercise-btn modal-trigger btn-floating halfway-fab waves-effect waves-light deep-orange"
                                  data-name="${Object.values(generateExerciseCards.exerciseName)[i]}" data-video="${Object.values(generateExerciseCards.video)[i]}" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
-                        <div class="card-content">
+                        <div class="card-content deep-orange-text">
                             <p>${Object.values(generateExerciseCards.exerciseName)[i]}</p>
                         </div>
                     </div>
