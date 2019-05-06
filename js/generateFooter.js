@@ -1,26 +1,23 @@
 var generateFooter = {
 
     text: {
-        1: 'Best Practices',
-        2: 'Donate Now',
+        1: 'Donate Now',
 
     },
 
     additionalClassIfAny: {
-        1: 'bestPractices',
-        2: 'donate',
+        1: 'donate',
+
 
     },
 
     icon: {
-        1: 'school',
-        2: 'monetization_on',
+        1: 'monetization_on',
 
     },
 
     link: {
-        1: '',
-        2: 'href=https://act.autismspeaks.org/site/Donation2?idb=135287805&4141.donation=form1&DONATION_LEVEL_ID_SELECTED=1&df_id=4141&mfc_pref=T&idb=[[S76:idb]]"',
+        1: 'href=https://act.autismspeaks.org/site/Donation2?idb=135287805&4141.donation=form1&DONATION_LEVEL_ID_SELECTED=1&df_id=4141&mfc_pref=T&idb=[[S76:idb]]"',
 
     },
 
