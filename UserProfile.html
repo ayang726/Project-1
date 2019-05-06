@@ -18,10 +18,10 @@
 </head>
 
 <style>
-
- .gridItem {
-  width: 50%;
-}
+    .gridItem {
+        width: 50%;
+        margin:
+    }
 
     .card {}
 
@@ -69,16 +69,14 @@
             </div>
 
 
-            <div class="col s12">
-                    <div class="grid">
-                            <a class="gridItem" href="golden-puzzle-piece.jpg"><img src="golden-puzzle-piece.jpg"></a>
-                            <a class="gridItem" href="golden-puzzle-piece.jpg"><img src="200w.webp"></a>
-                    </div>
+            <div class="col s7">
+                <div class="imgGallery" id="anotherVideo">
+                    <a class="gridItem" href="golden-puzzle-piece.jpg"><img src="golden-puzzle-piece.jpg"></a>
+                    <a class="gridItem" href="golden-puzzle-piece.jpg"><img src="200w.webp"></a>
+                </div>
             </div>
         </div>
     </div>
-
-
 
     </div>
 
@@ -111,10 +109,7 @@
     <script src="./js/record.js"></script>
     <script src="js/modal.js"></script>
 
-
     <!-- <video controls id="anotherVideo"></video> -->
-
-
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -130,14 +125,8 @@
         firebase.initializeApp(firebaseConfig);
 
 
-
         var storage = firebase.storage();
         var storeRef = storage.ref();
-
-        var grid = document.querySelector(".grid");
-        new TinyMasonry(grid);
-
-
 
 
         $(document).ready(function () {
@@ -159,17 +148,13 @@
             URL.then(function (url) {
                 console.log(url);
                 $("#anotherVideo").html(`
-    <source src="${url}" type="video/mp4">
-    </source>`);
-
-
-                topics.push(topic);
-                // adds button of input to page
+                 <source src="${url}" type="video/mp4">
+                </source>`);
 
                 var imgURL = child("/video/" + currentUser.videoList[i]);
                 var image = $("<img>").attr("src", imgURL);
-                image.addClass("carousel-item");
-                $(".carousel").append(image);
+                image.addClass("gridItem");
+                $("#anotherVideo").append(image);
 
 
 
