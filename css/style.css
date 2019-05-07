@@ -22,7 +22,7 @@ nav .brand-logo {
   font-size: 4.1rem;
   padding: 0;
   font-family: 'Fredoka One', cursive;
-  ;
+  margin-bottom: 0px;
 }
 
 .card-content {
@@ -30,12 +30,27 @@ nav .brand-logo {
   font-family: 'Fredoka One', cursive;
 }
 
+.card {
+  margin-top: 0px;
+}
+
 h5 {
   font-family: "Segoe UI", sans-serif;
   font-size: 25px;
+}
+
+
+.tokenSection {
+  margin-bottom: 0px;
+}
+
+video {
+  width: 100%;
+  height: auto;
 }
 
 h3 {
   font-family: 'Fredoka One', cursive;
   color: #FF5722;
 }
+
