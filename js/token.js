@@ -2,16 +2,16 @@ $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
 });
 
+var state = $(this).attr("data-state");
 
 $(".dropDownNumber").on("click", function () {
     $("#tokens").html("");
     var tokenNumber = $(this).attr("value");
     console.log(tokenNumber);
     for (i = 0; i < tokenNumber; i++) {
-        $("#tokens").append(`<button onclick="changeColor${i}()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn${i}"><i
+        $("#tokens").append(`<button onclick="changeColor${i}()" class="btn-floating btn-large waves-effect waves-light" id="starBtn${i}" ><i
     class="material-icons">star</i></button>`);
     }
-
 });
 
 
@@ -21,6 +21,7 @@ function changeColor0() {
     $("#starBtn0").removeClass("black");
     $("#starBtn0").addClass("orange");
 };
+
 function changeColor1() {
     console.log("star was clicked");
     $("#starBtn1").removeClass("black");
