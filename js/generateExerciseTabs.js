@@ -40,7 +40,7 @@ for (var i = 0; i < Object.keys(generateExerciseCards.exerciseName).length; i++)
                             <button class="choose-exercise-btn modal-trigger btn-floating halfway-fab waves-effect waves-light deep-orange"
                                  data-name="${Object.values(generateExerciseCards.exerciseName)[i]}" data-video="${Object.values(generateExerciseCards.video)[i]}" data-target="modal"><i class="material-icons">video_call</i></button>
                         </div>
-                        <div class="card-content deep-orange-text">
+                        <div class="card-content indigo-text">
                             <p>${Object.values(generateExerciseCards.exerciseName)[i]}</p>
                         </div>
                     </div>
