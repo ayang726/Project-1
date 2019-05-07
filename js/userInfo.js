@@ -7,6 +7,7 @@ var currentUser = {
 
 $(document).ready(function () {
     firebase.auth().onAuthStateChanged(function (user) {
+        console.log(firebase.auth());
         if (user) {
             currentUser.displayName = user.displayName;
             currentUser.email = user.email;
