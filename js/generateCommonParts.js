@@ -54,6 +54,7 @@ $("#navBar").append(`
                     <li><a href="./faqs.html">FAQ</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
                     <li><a href="./teamPage.html">The Team</a></li>
+                    <li><a href="./UserProfile.html">My Profile</a></li>
                 </ul>
 
             </div>

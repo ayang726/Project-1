@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-
-body, html{
+body, html {
 	height: 100%;
 	padding: 0;
 	margin: 0;
 	font-family: 'Sniglet', cursive;
 }
-h1{
+
+h1 {
 	font-weight: normal;
 	font-size: 4em;
 	font-family: 'Raleway', sans-serif;
@@ -15,31 +15,42 @@ h1{
 	width: 500px;
 	color: #F90;
 	text-align: center;
-
 }
 
 /* Animation webkit */
-@-webkit-keyframes myfirst
-{
-	0% {margin-left: -235px}
-	90% {margin-left: 100%;}
-	100% {margin-left: 100%;}
+
+@-webkit-keyframes myfirst {
+	0% {
+		margin-left: -235px
+	}
+	90% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 100%;
+	}
 }
 
 /* Animation */
-@keyframes myfirst
-{
-	0% {margin-left: -235px}
-	70% {margin-left: 100%;}
-	100% {margin-left: 100%;}
+
+@keyframes myfirst {
+	0% {
+		margin-left: -235px
+	}
+	70% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 100%;
+	}
 }
 
-.fish{
+.fish {
 	background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
 	width: 235px;
 	height: 104px;
 	margin-left: -235px;
-	position: absolute;	
+	position: absolute;
 	animation: myfirst 24s;
 	-webkit-animation: myfirst 24s;
 	animation-iteration-count: infinite;
@@ -48,42 +59,41 @@ h1{
 	-webkit-animation-timing-function: linear;
 }
 
-#fish{
+#fish {
 	top: 120px;
 }
 
-#fish2{
+#fish2 {
 	top: 260px;
 	animation-delay: 12s;
 	-webkit-animation-delay: 12s;
 }
 
-
-header{
+header {
 	height: 160px;
 }
 
-#form{
-	height: 100%;	
-	background-color: #98d4f3;
+#form {
+	height: 100%;
+	/* background-color: #98d4f3; */
 	overflow: hidden;
 	position: relative;
-	
 }
-form{
+
+form {
 	margin: 0 auto;
 	width: 500px;
 	padding-top: 40px;
 	color: white;
 	position: relative;
-	
-	
 }
-label, input, textarea{
-	display: block;	
+
+label, input, textarea {
+	display: block;
 }
-input, textarea{
-	width: 500px;	
+
+input, textarea {
+	width: 500px;
 	border: none;
 	border-radius: 20px;
 	outline: none;
@@ -95,23 +105,24 @@ input, textarea{
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
 	-o-transition: border 0.5s;
-	border: solid 3px #98d4f3;	
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	
-}
-input:focus, textarea:focus{
-	border: solid 3px #77bde0;	
+	border: solid 1px #3F51B5;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-textarea{
-	height: 100px;	
-	resize: none; 
+input:focus, textarea:focus {
+	border: solid 1px #FF5722;
+}
+
+textarea {
+	height: 100px;
+	resize: none;
 	overflow: auto;
 }
-input[type="submit"]{
-	background-color: #F90;
+
+input[type="submit"] {
+	background-color: #3F51B5;
 	color: white;
 	height: 50px;
 	cursor: pointer;
@@ -123,16 +134,18 @@ input[type="submit"]{
 	-o-transition: background-color 0.5s;
 	transition: background-color 0.5s;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
 	background-color: #e58f0e;
-	
 }
-label{
+
+label {
 	font-size: 1.5em;
 	margin-top: 20px;
 	padding-left: 20px;
 }
-.formgroup, .formgroup-active, .formgroup-error{
+
+.formgroup, .formgroup-active, .formgroup-error {
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-size: 10.5%;
@@ -144,10 +157,11 @@ label{
 	padding-top: 2px;
 }
 
-.formgroup-active{
+.formgroup-active {
 	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
 }
-.formgroup-error{
+
+.formgroup-error {
 	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
 	color: red;
 }
