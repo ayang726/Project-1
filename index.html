@@ -17,26 +17,15 @@
 </head>
 
 <body>
-    <nav class="deep-orange lighten-2" role="navigation">
-        <!-- site title -->
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
-            <!-- link to login page -->
+    <div id="navBar">
 
+    </div>
 
-            <div class="row right" class="right hide-on-med-and-down">
-                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light deep-orange" id="login-btn">User
-
-                    Login</a>
-            </div>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Exercises</a></li>
-                <li><a href="./faqs.html">FAQ</a></li>
-                <li><a href="#">The Team</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-
+    <div class="container">
+        <div class="row">
+            <div id="tokens" class="col s12 center-align"></div>
         </div>
-    </nav>
+    </div>
 
 
     <div class="container">
@@ -63,7 +52,8 @@
                     </div>
 
                     <div id="congrats-display"></div>
-                    <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right" id="now-you">play_arrow</i>NOW
+                    <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
+                            id="now-you">play_arrow</i>NOW
                         YOU!</button>
                     <button onclick="stopRecording()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
                             class="material-icons right" id="complete">check</i>Complete!</button>
@@ -116,6 +106,10 @@
     <script src="./js/record.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/generateFooter.js"></script>
+
+    <script src="js/generateNavBar.js"></script>
+
+    <script src="js/token.js"></script>
 
 
 
