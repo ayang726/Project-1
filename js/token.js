@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    $(".dropdown-trigger").dropdown();
+});
 
 
 $(".dropDownNumber").on("click", function () {
