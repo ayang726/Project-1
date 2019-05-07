@@ -30,4 +30,8 @@ nav .brand-logo {
   font-family: 'Fredoka One', cursive;
 }
 
-.material-icons.orange600 { color: #FB8C00; }
+h5 {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 25px;
+}
+
