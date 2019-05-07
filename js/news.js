@@ -31,8 +31,8 @@ function news() {
             var displaySourceSite = response.articles[i].url;
 
             var newRow = $("<tr>").append(
-                $("<td>").html(displaySourceTitle),
-                $("<td>").html(displaySourceSite)
+                $("<tr>").html(displaySourceTitle),
+                $("<tr>").html(displaySourceSite)
             );
 
             $("#article").append(newRow).append('&nbsp;');
