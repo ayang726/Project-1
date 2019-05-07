@@ -14,7 +14,7 @@ function celebrate() {
     var offset = 10;
     var limit = 1;
     var q = randomQuery;
-    var randomQ = ["minion", "disney", "happy", "kid", "clapping", "balloons", "dance", "party", "celebrate", "cartoons", "hooray"];
+    var randomQ = ["minion", "disney", "puppy", "kittens", "peanuts", "balloons", "bugs bunny", "animals", "mickey mouse", "cartoons", "tom and jerry"];
     var randomQuery = getRandomArrayElement(randomQ);
 
     function getRandomArrayElement(randomQ) {
@@ -38,6 +38,8 @@ function celebrate() {
         $("#congrats-display").html(`<img src="${celeb}" style="margin-top:10px"; width="100%" height="100%" />`);
     });
 };
+
+//cliend ID for spotify: 5726119031cb4611aa27f623afd2488d
 
 function playSound() {
 

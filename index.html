@@ -17,24 +17,16 @@
 </head>
 
 <body>
-    <nav class="light-blue lighten-1" role="navigation">
-        <!-- site title -->
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
-            <!-- link to login page -->
+    <div id="navBar">
+
+    </div>
 
 
-            <div class="row right" class="right hide-on-med-and-down">
-                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange">User
-                    Login</a>
-            </div>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Exercises</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">The Team</a></li>
-            </ul>
-
+    <div class="container">
+        <div class="row">
+            <div id="tokens" class="col s12 center-align"></div>
         </div>
-    </nav>
+    </div>
 
 
     <div class="container">
@@ -62,7 +54,8 @@
 
                     <div id="congrats-display"></div>
                     <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
-                            id="now-you">play_arrow</i>NOW YOU!</button>
+                            id="now-you">play_arrow</i>NOW
+                        YOU!</button>
                     <button onclick="stopRecording()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
                             class="material-icons right" id="complete">check</i>Complete!</button>
                 </div>
@@ -70,67 +63,56 @@
 
 
             <div id="exerciseCard" class="row">
-
+                <!-- Excercise cards with on clikc button will be generated here -->
             </div>
         </div>
-    </div>
+
+
+        <footer class="footer" id="footer">
+
+            <!-- footer goes here -->
+
+        </footer>
+        <!-- Best Practices modal goes here from Generate Footer JS -->
+
+
 
     </div>
-    <br><br>
-    </div>
 
-    <footer class="page-footer orange">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <!-- donation button goes here -->
-                    <a href="https://act.autismspeaks.org/site/Donation2?idb=135287805&4141.donation=form1&DONATION_LEVEL_ID_SELECTED=1&df_id=4141&mfc_pref=T&idb=[[S76:idb]]"
-                        button class="btn waves-effect waves-light" type="submit" name="action">Donate to Autism Speaks
-                        <i class="material-icons right">monetization_on</i>
-                        </button></a>
-                    <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
-                </div>
-            </div>
 
-    </footer>
+
+
+
 
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <!-- <script src="js/init.js"></script> -->
-    <script src="js/congrats.js"></script>
-    <script src="js/generateExcersizeTabs.js"></script>
-    <script src="./js/record.js"></script>
-    <script src="js/modal.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- <video controls id="anotherVideo"></video> -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-storage.js"></script>
-
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-storage.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCWUynieHBs00mL9wAydWO3nsMOsGVX-R8",
-            authDomain: "click-counter-harcam-3178e.firebaseapp.com",
-            databaseURL: "https://click-counter-harcam-3178e.firebaseio.com",
-            projectId: "click-counter-harcam-3178e",
-            storageBucket: "click-counter-harcam-3178e.appspot.com",
-            messagingSenderId: "672151007179",
-            appId: "1:672151007179:web:dd623268f38a2ed2"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+    <script src="js/firebaseInit.js"></script>
+    <script src="js/userInfo.js"></script>
+    <script src="js/materialize.js"></script>
+    <!-- <script src="js/init.js"></script> -->
+    <script src="js/congrats.js"></script>
+    <script src="js/generateExerciseTabs.js"></script>
+    <script src="./js/record.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/generateFooter.js"></script>
+
+    <script src="js/generateNavBar.js"></script>
+
+    <script src="js/token.js"></script>
 
 
-        var storage = firebase.storage();
-        var storeRef = storage.ref();
-    </script>
 
 </body>
 
