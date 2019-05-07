@@ -1,51 +1,27 @@
 
-$("#one").on("click", function () {
-    console.log("one token please")
-    $("#tokens").html(`<button onclick="changeColor()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn"><i
-    class="material-icons">star</i></button>`)
-});
 
+$(".dropDownNumber").on("click", function () {
+    $("#tokens").html("");
+    var tokenNumber = $(this).attr("value");
+    console.log(tokenNumber);
+    for (i = 0; i < tokenNumber; i++) {
+        $("#tokens").append(`<button onclick="changeColor${i}()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn${i}"><i
+    class="material-icons">star</i></button>`);
+    }
 
-$("#two").on("click", function () {
-    console.log("one token please")
-    $("#tokens").html(`<button onclick="changeColor()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn"><i
-    class="material-icons">star</i></button><button onclick="changeColor2()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn2"><i
-    class="material-icons">star</i></button>`)
-});
-
-$("#three").on("click", function () {
-    console.log("one token please")
-    $("#tokens").html(`<button onclick="changeColor()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn"><i
-    class="material-icons">star</i></button><button onclick="changeColor2()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn2"><i
-    class="material-icons">star</i></button><button onclick="changeColor3()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn3"><i
-    class="material-icons">star</i></button>`)
-});
-
-$("#four").on("click", function () {
-    console.log("one token please")
-    $("#tokens").html(`<button onclick="changeColor()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn"><i
-    class="material-icons">star</i></button><button onclick="changeColor2()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn2"><i
-    class="material-icons">star</i></button><button onclick="changeColor3()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn3"><i
-    class="material-icons">star</i></button><button onclick="changeColor4()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn4"><i
-    class="material-icons">star</i></button>`)
-});
-
-$("#five").on("click", function () {
-    console.log("one token please")
-    $("#tokens").html(`<button onclick="changeColor()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn"><i
-    class="material-icons">star</i></button><button onclick="changeColor2()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn2"><i
-    class="material-icons">star</i></button><button onclick="changeColor3()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn3"><i
-    class="material-icons">star</i></button><button onclick="changeColor4()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn4"><i
-    class="material-icons">star</i></button><button onclick="changeColor5()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn5"><i
-    class="material-icons">star</i></button>`)
 });
 
 
 
-function changeColor() {
+function changeColor0() {
     console.log("star was clicked");
-    $("#starBtn").removeClass("black");
-    $("#starBtn").addClass("orange");
+    $("#starBtn0").removeClass("black");
+    $("#starBtn0").addClass("orange");
+};
+function changeColor1() {
+    console.log("star was clicked");
+    $("#starBtn1").removeClass("black");
+    $("#starBtn1").addClass("orange");
 };
 function changeColor2() {
     console.log("star was clicked");
@@ -61,10 +37,5 @@ function changeColor4() {
     console.log("star was clicked");
     $("#starBtn4").removeClass("black");
     $("#starBtn4").addClass("orange");
-};
-function changeColor5() {
-    console.log("star was clicked");
-    $("#starBtn5").removeClass("black");
-    $("#starBtn5").addClass("orange");
 };
 
