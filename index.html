@@ -25,10 +25,19 @@
 
             <div class="row right" class="right hide-on-med-and-down">
                 <a href="./SigninAuth.html" class="btn-large waves-effect waves-light deep-orange" id="login-btn">User
-
                     Login</a>
             </div>
+
+            <ul id="dropdown1" class="dropdown-content">
+                <li value=1 id="one" class="dropDownNumber"><a href="#">one</a></li>
+                <li value=2 id="two" class="dropDownNumber"><a href="#">two</a></li>
+                <li value=3 id="three" class="dropDownNumber"><a href="#">three</a></li>
+                <li value=4 id="four" class="dropDownNumber"><a href="#">four</a></li>
+                <li value=5 id="five" class="dropDownNumber"><a href="#">five</a></li>
+            </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">View Tokens<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="#">Exercises</a></li>
                 <li><a href="./faqs.html">FAQ</a></li>
                 <li><a href="#">The Team</a></li>
@@ -36,6 +45,12 @@
 
         </div>
     </nav>
+
+    <div class="container">
+        <div class="row">
+            <div id="tokens" class="col s12 center-align"></div>
+        </div>
+    </div>
 
 
     <div class="container">
@@ -62,7 +77,8 @@
                     </div>
 
                     <div id="congrats-display"></div>
-                    <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right" id="now-you">play_arrow</i>NOW
+                    <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
+                            id="now-you">play_arrow</i>NOW
                         YOU!</button>
                     <button onclick="stopRecording()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
                             class="material-icons right" id="complete">check</i>Complete!</button>
@@ -115,6 +131,7 @@
     <script src="./js/record.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/generateFooter.js"></script>
+    <script src="js/token.js"></script>
 
 
 
