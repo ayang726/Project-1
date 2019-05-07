@@ -5,7 +5,10 @@
 $(document).ready(function () {
     console.log(currentUser);
     setTimeout(function () {
-        displayVideo(currentUser.videoList[0]);
+
+        for (var i = 0; i < currentUser.videoList.length; i++) {
+            displayVideo(currentUser.videoList[i]);
+        }
     }, 1000);
 
 });
@@ -21,7 +24,18 @@ function displayVideo(fileName) {
     URL.then(function (url) {
         console.log("this is the url");
         console.log(url);
-        $("#anotherVideo").html(`<source src="${url}" type="video/mp4"></source>`);
+        $(".studentVideoCards").append(`<div class="card">
+        <div class="card-image">
+            <video id="anotherVideo" width="320" height="240" controls><source src="${url}" type="video/mp4"></source></video>
+        </div>
+        <div class="card-content">
+            <p>
+                <div class="card-title" id="name">NAME</div>
+            </p>
+            <p id="age">Age</p>
+        </div>
+    </div>`);
     });
 
 };
+

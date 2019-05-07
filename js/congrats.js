@@ -5,6 +5,7 @@ function congratulate() {
 
     celebrate();
     playSound();
+    displayVideo(currentUser.videoList[0])
 }
 
 // Function to run when the button is clicked
