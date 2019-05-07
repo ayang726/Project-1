@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
-
 body, html{
 	height: 100%;
 	padding: 0;
@@ -62,7 +61,6 @@ h1{
 
 header{
 	height: 160px;
-	background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
 }
 
 #form{
@@ -85,9 +83,9 @@ label, input, textarea{
 	display: block;	
 }
 input, textarea{
-	width: 575px;	
+	width: 500px;	
 	border: none;
-	border-radius: 30px;
+	border-radius: 20px;
 	outline: none;
 	padding: 10px;
 	font-family: 'Sniglet', cursive;
@@ -97,7 +95,7 @@ input, textarea{
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
 	-o-transition: border 0.5s;
-	border: solid 1px lightgray;	
+	border: solid 3px #98d4f3;	
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
@@ -146,17 +144,10 @@ label{
 	padding-top: 2px;
 }
 
-.formgroup{
-	background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');	
-}
 .formgroup-active{
 	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
 }
 .formgroup-error{
 	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
 	color: red;
-}
-
-#submitButton {
-    margin-bottom: 50px;
 }
