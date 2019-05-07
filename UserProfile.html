@@ -19,29 +19,13 @@
 <body>
     <div id="navBar">
 
+
     </div>
-    <!-- <nav class="light-blue lighten-1" role="navigation"> -->
-    <!-- site title -->
-    <!-- <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a> -->
-    <!-- link to login page -->
 
 
-    <!-- <div class="row right" class="right hide-on-med-and-down">
-                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange">User
-                    Login</a>
-            </div>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Exercises</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">The Team</a></li>
-            </ul>
 
-        </div>
-    </nav> -->
+    <div class="container">
 
-
-    <div>
-        <br>
         <div class="row">
             <div class="col s12">
                 <div class="col s5 studentVideoCards">
@@ -59,22 +43,21 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    </div>
 
-    </div>
-    <br><br>
-    </div>
+        <footer class="footer" id="footer">
 
-    <footer class="footer" id="footer">
+            <!-- footer goes here -->
 
-        <!-- footer goes here -->
+        </footer>
+    </div>
 
     </footer>
 
     <!-- <video controls id="anotherVideo"></video> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/generateCommonParts.js"></script>
 
     <!-- <video controls id="anotherVideo"></video> -->
 
@@ -84,26 +67,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBNBdNhl-_z2vGoHdtdPEkpKRvQ5ID5MdM",
-            authDomain: "nowyou-recordedvideos.firebaseapp.com",
-            databaseURL: "https://nowyou-recordedvideos.firebaseio.com",
-            projectId: "nowyou-recordedvideos",
-            storageBucket: "nowyou-recordedvideos.appspot.com",
-            messagingSenderId: "508680410714",
-            appId: "1:508680410714:web:f41877e47f46ca92"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-
-        var storage = firebase.storage();
-        var storeRef = storage.ref();
-        var database = firebase.database();
-    </script>
+    <script src="js/firebaseInit.js"></script>
 
 
     <script src="./js/userInfo.js"></script>
@@ -122,40 +86,7 @@
     <!-- <script src="js/modal.js"></script> -->
     <script src="js/generateFooter.js"></script>
 
-    <!-- <script>
-    $(document).ready(function () {
-    console.log(currentUser);
-    setTimeout(function () {
-    displayVideo(currentUser.videoList[0]);
-    }, 1000);
 
-    });
-
-
-    function displayVideo(fileName) {
-    console.log("message140 " + fileName)
-    let storageRef = storage.ref('/video').child(fileName);
-    console.log(storageRef);
-    let URL = storageRef.getDownloadURL();
-    console.log(URL);
-
-    URL.then(function (url) {
-    console.log(url);
-    $("#anotherVideo").html(`
-    <source src="${url}" type="video/mp4">
-    </source>`);
-
-    var imgURL = child("/video/" + currentUser.videoList[i]);
-    var image = $("<img>").attr("src", imgURL);
-    image.addClass("gridItem");
-    $("#anotherVideo").append(image);
-
-    });
-
-    };
-
-
-    </script> -->
 
 </body>
 

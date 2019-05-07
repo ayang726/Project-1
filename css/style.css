@@ -39,6 +39,7 @@ h5 {
   font-size: 25px;
 }
 
+
 .tokenSection {
   margin-bottom: 0px;
 }
@@ -46,5 +47,10 @@ h5 {
 video {
   width: 100%;
   height: auto;
+}
+
+h3 {
+  font-family: 'Fredoka One', cursive;
+  color: #FF5722;
 }
 

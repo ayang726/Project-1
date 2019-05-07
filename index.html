@@ -21,6 +21,7 @@
 
     </div>
 
+
     <div class="container tokenSection">
         <div class="row">
             <ul id="dropdown1" class="dropdown-content">
@@ -35,6 +36,9 @@
                             class="material-icons left">arrow_drop_down</i></a></li>
                 <div id="tokens" class="col s12 center-align"></div>
         </div>
+
+    <div class="container">
+
         <div class="row">
             <div id="tokens" class="col s12 center-align"></div>
         </div>
@@ -63,10 +67,14 @@
                     </div>
 
                     <div id="congrats-display"></div>
-                    <!-- <button class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
-                            id="now-you">play_arrow</i>NOW
-                        YOU!</button> -->
-                    <button onclick="stopRecording()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
+
+                    <button onclick="showMe()" class="waves-effect waves-light blue accent-3 btn"><i
+                            class="material-icons right" id="now-you">ondemand_video</i>Show Me</button>
+                    <button onclick="nowYou()" class="waves-effect waves-light blue accent-3 btn"><i
+                            class="material-icons right" id="now-you">accessibility</i>NOW
+                        YOU!</button>
+                    <button onclick="complete()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
+
                             class="material-icons right" id="complete">check</i>Complete!</button>
                 </div>
             </div>
@@ -83,7 +91,6 @@
             <!-- footer goes here -->
 
         </footer>
-        <!-- Best Practices modal goes here from Generate Footer JS -->
 
 
 
@@ -116,9 +123,7 @@
     <script src="js/generateExerciseTabs.js"></script>
     <script src="./js/record.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/generateFooter.js"></script>
-
-    <script src="js/generateNavBar.js"></script>
+    <script src="js/generateCommonParts.js"></script>
 
     <script src="js/token.js"></script>
 
