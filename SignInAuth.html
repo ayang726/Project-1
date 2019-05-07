@@ -28,32 +28,22 @@
 </head>
 
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <!-- site title -->
-     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
-      <!-- link to login page -->
-        <div class="row right" class="right hide-on-med-and-down">
-          <a href="https://act.autismspeaks.org/site/Donation2?idb=135287805&4141.donation=form1&DONATION_LEVEL_ID_SELECTED=1&df_id=4141&mfc_pref=T&idb=[[S76:idb]]"
-             class="btn-large waves-effect waves-light orange"><i class="material-icons right">monetization_on</i> Donate
-              to Autism Speaks! </a>
-        </div>
-    </div>
-  </nav><br><br>
 
-<div id="firebaseui-auth-container"></div>
- <div id="loader">Loading...</div><br><br><br><br>
+  <div id="navBar">
 
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <!-- donation button goes here -->
-          <br>
-        </div>
-      </div>
+  </div>
+  <div class="container">
 
-  </footer>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div><br><br><br><br>
 
+    <footer class="footer" id="footer">
+
+      <!-- footer goes here -->
+
+    </footer>
+
+  </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -63,20 +53,9 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
-
+  <script src="js/firebaseInit.js"></script>
   <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCWUynieHBs00mL9wAydWO3nsMOsGVX-R8",
-      authDomain: "click-counter-harcam-3178e.firebaseapp.com",
-      databaseURL: "https://click-counter-harcam-3178e.firebaseio.com",
-      projectId: "click-counter-harcam-3178e",
-      storageBucket: "click-counter-harcam-3178e.appspot.com",
-      messagingSenderId: "672151007179",
-      appId: "1:672151007179:web:dd623268f38a2ed2"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth())
     var uiConfig = {
@@ -108,6 +87,8 @@
     // The start method will wait until the DOM is loaded.
     ui.start('#firebaseui-auth-container', uiConfig);
   </script>
+  <script src="js/generateCommonParts.js"></script>
+
 </body>
 
 </html>

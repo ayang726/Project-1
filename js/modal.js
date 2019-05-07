@@ -1,8 +1,15 @@
+// slider initializer
 var elems = document.querySelector('#slider');
 var slider = M.Slider.init(elems, { interval: 9999999, height: 350 });
 slider.pause();
+// modal initializer
+$('#modal').modal({
+    onCloseEnd: dismissingModal,
+    onOpenStart: openModal
+});
 
 
+// Open dismiss modals
 function dismissingModal() {
     if (mediaRecorder.state === "recording") {
         mediaRecorder.stop();
@@ -19,14 +26,12 @@ function openModal() {
     slideToPage(0);
 }
 
+// button onclick
 $(".choose-exercise-btn").on("click", function () {
     console.log("choose exercise btn click");
-    $('#modal').modal({
-        onCloseEnd: dismissingModal,
-        onOpenStart: openModal
-    });
 
-    var name = "lindsey";
+
+    var name = currentUser.displayName.trim().replace(" ", "-");
     var exercise = $(this).attr("data-name");
 
     console.log("I'm called. msg-120");
@@ -88,3 +93,28 @@ function onPlayerStateChange(event) {
     }
 }
 
+// Three Modal Buttons Click Events
+// showMe navigates to video page and resets the youtube video
+// nowYou navigates to camera page.
+// complete navigates to last page and show events
+
+function showMe() {
+    slideToPage(0);
+    player.seekTo(0);
+}
+
+function nowYou() {
+    player.stopVideo();
+    slideToPage(1);
+
+}
+
+function complete() {
+    player.stopVideo();
+    slideToPage(2);
+    stopRecording();
+
+    setTimeout(() => {
+        dismissingModal();
+    }, 5000);
+}
