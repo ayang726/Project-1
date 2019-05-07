@@ -9,6 +9,7 @@ $('#modal').modal({
 });
 
 
+// Open dismiss modals
 function dismissingModal() {
     if (mediaRecorder.state === "recording") {
         mediaRecorder.stop();
@@ -25,6 +26,7 @@ function openModal() {
     slideToPage(0);
 }
 
+// button onclick
 $(".choose-exercise-btn").on("click", function () {
     console.log("choose exercise btn click");
 
@@ -91,3 +93,28 @@ function onPlayerStateChange(event) {
     }
 }
 
+// Three Modal Buttons Click Events
+// showMe navigates to video page and resets the youtube video
+// nowYou navigates to camera page.
+// complete navigates to last page and show events
+
+function showMe() {
+    slideToPage(0);
+    player.seekTo(0);
+}
+
+function nowYou() {
+    player.stopVideo();
+    slideToPage(1);
+
+}
+
+function complete() {
+    player.stopVideo();
+    slideToPage(2);
+    stopRecording();
+
+    setTimeout(() => {
+        dismissingModal();
+    }, 5000);
+}

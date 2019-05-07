@@ -188,11 +188,9 @@ navigator.mediaDevices.ondevicechange = function (event) {
 }
 
 function stopRecording() {
-    console.log("Complete button clicked");
     mediaRecorder.stop();
     // console.log("stop mediarecorder again");
     // mediaRecorder = null;
-    slideToPage(2);
     // slider.next();
     // slider.pause();
     celebrate();
