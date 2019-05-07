@@ -1,5 +1,5 @@
 
-
+window.onload = newsDisplay();
 function newsDisplay() {
     news();
 
@@ -25,21 +25,22 @@ function news() {
         method: "GET",
         dataType: "json"
     }).then(function (response) {
-        var displaySourceTitle = response.articles[2].title;
-        //var displaySourceName = response.articles[0].source.name;
-        //var displaySourceDesc = response.articles[3].description;
-        var displaySourceSite = response.articles[4].url;
+        for (var i = 0; i < response.articles.length; i++) {
+            console.log(response.articles.length);
+            var displaySourceTitle = response.articles[i].title;
+            var displaySourceSite = response.articles[i].url;
 
-        var newRow = $("<tr>").append(
-            $("<td>").html(displaySourceTitle),
-            //$("<td>").html(displaySourceDesc),
-            //$("<td>").html(displaySourceName),
-            $("<td>").html(displaySourceSite)
-        );
+            var newRow = $("<tr>").append(
+                $("<td>").html(displaySourceTitle),
+                $("<td>").html(displaySourceSite)
+            );
+
+            $("#article").append(newRow).append('&nbsp;');
+        };
+
+        // $(document).ready(function () {
+        //});
 
 
-        //$("#article-table > tbody").append(newRow);
-
-        $("#article").html(newRow);
     });
 };
