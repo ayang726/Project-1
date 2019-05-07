@@ -19,6 +19,7 @@ function displayVideo(fileName) {
     console.log(URL);
 
     URL.then(function (url) {
+        console.log("this is the url");
         console.log(url);
         $("#anotherVideo").html(`<source src="${url}" type="video/mp4"></source>`);
     });
