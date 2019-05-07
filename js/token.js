@@ -8,7 +8,7 @@ $(".dropDownNumber").on("click", function () {
     var tokenNumber = $(this).attr("value");
     console.log(tokenNumber);
     for (i = 0; i < tokenNumber; i++) {
-        $("#tokens").append(`<button onclick="changeColor${i}()" class="btn-floating btn-large waves-effect waves-light black" id="starBtn${i}"><i
+        $("#tokens").append(`<button onclick="changeColor${i}()" class="btn-floating btn-large waves-effect waves-light indigo lighten-1" id="starBtn${i}"><i
     class="material-icons">star</i></button>`);
     }
 
@@ -18,27 +18,27 @@ $(".dropDownNumber").on("click", function () {
 
 function changeColor0() {
     console.log("star was clicked");
-    $("#starBtn0").removeClass("black");
-    $("#starBtn0").addClass("orange");
+    $("#starBtn0").removeClass("indigo lighten-1");
+    $("#starBtn0").addClass("deep-orange lighten-1");
 };
 function changeColor1() {
     console.log("star was clicked");
-    $("#starBtn1").removeClass("black");
-    $("#starBtn1").addClass("orange");
+    $("#starBtn1").removeClass("indigo lighten-1");
+    $("#starBtn1").addClass("deep-orange lighten-1");
 };
 function changeColor2() {
     console.log("star was clicked");
-    $("#starBtn2").removeClass("black");
-    $("#starBtn2").addClass("orange");
+    $("#starBtn2").removeClass("indigo lighten-1");
+    $("#starBtn2").addClass("deep-orange lighten-1");
 };
 function changeColor3() {
     console.log("star was clicked");
-    $("#starBtn3").removeClass("black");
-    $("#starBtn3").addClass("orange");
+    $("#starBtn3").removeClass("indigo lighten-1");
+    $("#starBtn3").addClass("deep-orange lighten-1");
 };
 function changeColor4() {
     console.log("star was clicked");
-    $("#starBtn4").removeClass("black");
-    $("#starBtn4").addClass("orange");
+    $("#starBtn4").removeClass("indigo lighten-1");
+    $("#starBtn4").addClass("deep-orange lighten-1");
 };
 
