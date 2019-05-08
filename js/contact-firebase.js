@@ -28,7 +28,7 @@ $("#submitButton").on("click", function (event) {
     $("#message").val("");
 
     // Uploads employee data to the database
-    database.ref("/users/" + currentUser.uid + "messages").push(newMsg);
+    database.ref("/users/" + currentUser.uid + "/messages").push(newMsg);
 });
 
 
