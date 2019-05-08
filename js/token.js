@@ -2,7 +2,6 @@ $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
 
 
-    // var state = $(this).attr("data-state");
 
     $(".dropDownNumber").on("click", function () {
         $("#tokens").html("");
@@ -10,6 +9,7 @@ $(document).ready(function () {
         console.log(tokenNumber);
         for (i = 0; i < tokenNumber; i++) {
             $("#tokens").append(`<button class="btn-floating btn-large waves-effect waves-light black starBtn" id="starBtn${i}" ><i
+
     class="material-icons">star</i></button>`);
         }
         $(".starBtn").on("click", function () {
@@ -22,5 +22,7 @@ $(document).ready(function () {
 
 
 
+
 });
+
 
