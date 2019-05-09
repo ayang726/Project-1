@@ -44,7 +44,7 @@ $("#navBar").append(`
 
 
                 <div class="row right" class="right hide-on-med-and-down">
-                    <a href="./SigninAuth.html" class="btn-large waves-effect waves-light deep-orange"
+                    <a href="./SignInAuth.html" class="btn-large waves-effect waves-light deep-orange"
                         id="login-btn">User
 
                         Login</a>
