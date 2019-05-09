@@ -51,7 +51,7 @@ $("#navBar").append(`
                 </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="./index.html">Exercises</a></li>
-                    <li><a href="./faqs.html">FAQ</a></li>
+                    <li><a href="./faqs.html">Resources</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
                     <li><a href="./teamPage.html">The Team</a></li>
                     <li><a href="./UserProfile.html">My Profile</a></li>
