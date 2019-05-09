@@ -17,7 +17,7 @@ $(document).ready(function () {
         $(".starBtn").on("click", function () {
             console.log(this);
             $(this).toggleClass("indigo");
-            $(this).toggleClass("orange");
+            $(this).toggleClass("deep-orange");
         });
     });
 
