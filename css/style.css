@@ -52,3 +52,10 @@ h3 {
   font-family: 'Fredoka One', cursive;
   color: #FF5722;
 }
+
+.footer {
+  position: fixed;
+  bottom:5px;
+  left: 20vw; 
+  /* Can someone fix this? My eye for style is really bad */
+}

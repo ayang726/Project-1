@@ -34,7 +34,7 @@ for (var i = 0; i < Object.keys(generateFooter.text).length; i++) {
     </button></a>  
   `)
 
-};
+}
 
 $("#navBar").append(`
 <nav class="indigo" role="navigation">
