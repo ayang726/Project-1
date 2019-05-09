@@ -55,7 +55,8 @@ h3 {
 
 .footer {
   position: fixed;
-  bottom:5px;
-  left: 20vw; 
-  /* Can someone fix this? My eye for style is really bad */
+  width: 180px;
+  height: 60px;
+  bottom: 2px;
+  right: 2px;
 }
