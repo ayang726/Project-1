@@ -2,9 +2,12 @@ $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
 
 
+    // var state = $(this).attr("data-state");
+    $(".dropdown-trigger").on("click", function () {
+        $("#tokens").html("");
+    });
 
     $(".dropDownNumber").on("click", function () {
-        $("#tokens").html("");
         var tokenNumber = $(this).attr("value");
         console.log(tokenNumber);
         for (i = 0; i < tokenNumber; i++) {
