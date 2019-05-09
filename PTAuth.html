@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>NowYou!</title>
+
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="navBar">
+
+  </div>
+  <div class="container">
+
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div><br><br><br><br>
+
+    <footer class="footer" id="footer">
+
+      <!-- footer goes here -->
+
+    </footer>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script src="js/firebaseInit.js"></script>
+  <script>
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth())
+    var uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+          // User successfully signed in.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        uiShown: function () {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById('loader').style.display = 'none';
+        }
+      },
+      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+      signInFlow: 'popup',
+      
+      // this should lead to PTdashboard;
+      signInSuccessUrl: '#',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+      // Terms of service url.
+      tosUrl: '<your-tos-url>',
+      // Privacy policy url.
+      privacyPolicyUrl: 'Terms.html'
+    };
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  <script src="js/generateCommonParts.js"></script>
+
+</body>
+
+</html>

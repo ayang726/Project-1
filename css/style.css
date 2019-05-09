@@ -39,7 +39,6 @@ h5 {
   font-size: 25px;
 }
 
-
 .tokenSection {
   margin-bottom: 0px;
 }
@@ -54,3 +53,10 @@ h3 {
   color: #FF5722;
 }
 
+.footer {
+  position: fixed;
+  width: 180px;
+  height: 60px;
+  bottom: 2px;
+  right: 2px;
+}

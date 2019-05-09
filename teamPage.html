@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>NowYou!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>NowYou!</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
 
     <!-- google fonts -->
@@ -23,32 +23,21 @@
     .card-title {
         color: cornflowerblue;
     }
-    .row.right{
+
+    .row.right {
         margin: 0;
     }
-    .card{
-       text-align: center;
+
+    .card {
+        text-align: center;
 
     }
 </style>
+
 <body>
-    <nav class="light-blue lighten-1" role="navigation">
-        <!-- site title -->
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NowYou!</a>
-            <!-- link to login page -->
+    <div id="navBar">
 
-            <div class="row right" class="right hide-on-med-and-down">
-                <a href="./SigninAuth.html" class="btn-large waves-effect waves-light orange">User
-                    Login</a>
-            </div>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Exercises</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">The Team</a></li>
-            </ul>
-
-        </div>
-    </nav>
+    </div>
     <br><br>
     <div class="container">
         <div class="row">
@@ -58,7 +47,9 @@
                         <img src="Assets/Images/bitmoLD.png">
                     </div>
                     <div class="card-content">
-                        <p><div class="card-title">Lindsey Duquette</div> Quality Assurance Engineer</p>
+                        <p>
+                            <div class="card-title">Lindsey Duquette</div> Quality Assurance Engineer
+                        </p>
                     </div>
                 </div>
             </div>
@@ -119,22 +110,11 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
+        <footer class="footer" id="footer">
 
-        <footer class="page-footer orange">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <!-- donation button goes here -->
-                        <a href="https://act.autismspeaks.org/site/Donation2?idb=135287805&4141.donation=form1&DONATION_LEVEL_ID_SELECTED=1&df_id=4141&mfc_pref=T&idb=[[S76:idb]]"
-                            button class="btn waves-effect waves-light" type="submit" name="action">Donate to Autism
-                            Speaks
-                            <i class="material-icons right">monetization_on</i>
-                            </button></a>
-                        <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
-                    </div>
-                </div>
-            </div>
+            <!-- footer goes here -->
+
         </footer>
 
 
@@ -146,6 +126,7 @@
         <script src="js/generateExcersizeTabs.js"></script>
         <script src="./js/record.js"></script>
         <script src="js/modal.js"></script>
+        <script src="js/generateCommonParts.js"></script>
 </body>
 
 </html>

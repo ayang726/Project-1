@@ -11,18 +11,22 @@ $(document).ready(function () {
         var tokenNumber = $(this).attr("value");
         console.log(tokenNumber);
         for (i = 0; i < tokenNumber; i++) {
+
             $("#tokens").append(`<button class="btn-floating btn-large waves-effect waves-light indigo starBtn" id="starBtn${i}" ><i
+
     class="material-icons">star</i></button>`);
         }
         $(".starBtn").on("click", function () {
             console.log(this);
             $(this).toggleClass("indigo");
-            $(this).toggleClass("orange");
+            $(this).toggleClass("deep-orange");
         });
     });
 
 
 
 
+
 });
+
 
