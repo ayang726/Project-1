@@ -76,6 +76,7 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 for (var i = 0; i < childInfo.childNames.length; i++) {
     $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton${i}">${childInfo.childNames[i]}</button>`)
 
+    $(`#studentVideoButton${i}`).off();
     $("#videoCards").hide();
     $(`#studentVideoButton${i}`).on("click", function () {
         $("#videoCards").hide();
@@ -89,10 +90,13 @@ for (var i = 0; i < childInfo.childNames.length; i++) {
                 // $(".studentVideoCards").show();
                 var clickedStudent = childInfo.childNames[i]
                 $(`.${clickedStudent}`).show();
+                $(`#studentVideoButton${i}`).off("click");
                 return;
+            } else {
+                $("#videoCards").hide();
             }
         }
-        $(`#studentVideoButton${i}`).off();
+
     });
 
 
