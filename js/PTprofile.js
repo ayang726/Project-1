@@ -54,7 +54,7 @@ function displayVideo(fileName, childName) {
             </p>
         </div>
         </div>`);
-        $(`.${childName}`).hide();
+        // $(`.${childName}`).hide();
     }
 
     );
@@ -69,39 +69,15 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 }
 
 
-// $(".studentVideoCards").hide()
+// // $(".studentVideoCards").hide()
 
 
 
-for (var i = 0; i < childInfo.childNames.length; i++) {
-    $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton${i}">${childInfo.childNames[i]}</button>`)
-
-    $(`#studentVideoButton${i}`).off();
-    $("#videoCards").hide();
-    $(`#studentVideoButton${i}`).on("click", function () {
-        $("#videoCards").hide();
-        console.log($(this));
-        var studentName = $(this).text();
-        console.log(studentName);
-        // console.log($("#videoCards").attr(value));
-
-        for (var i = 0; i < childInfo.childNames.length; i++) {
-            if (studentName === childInfo.childNames[i]) {
-                // $(".studentVideoCards").show();
-                var clickedStudent = childInfo.childNames[i]
-                $(`.${clickedStudent}`).show();
-                $(`#studentVideoButton${i}`).off("click");
-                return;
-            } else {
-                $("#videoCards").hide();
-            }
-        }
-
-    });
+// for (var i = 0; i < childInfo.childNames.length; i++) {
+//     $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton">${childInfo.childNames[i]}</button>`)
 
 
-
-}
+// }
 
 // $("#studentVideoButton").on("click", function () {
 //     $("#videoCards").hide();
@@ -115,6 +91,8 @@ for (var i = 0; i < childInfo.childNames.length; i++) {
 //             // $(".studentVideoCards").show();
 //             var clickedStudent = childInfo.childNames[i]
 //             $(`.${clickedStudent}`).show();
+//         } else {
+//             $("#videoCards").hide();
 //         }
 //     }
 
