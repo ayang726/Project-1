@@ -1,24 +1,8 @@
 
-// console.log("ALERT ALERT ALERT")
-// console.log(`this is what I want` + firebase.auth());
-// let storageRef = storage.ref('/video').child;
-
-// console.log("this is important");
-// console.log(currentUser);
-// Initialize the default app
-// $(document).ready(function () {
-//     firebase.auth().onAuthStateChanged
-// import * as admin from 'firebase-admin';
-
 var childInfo = {
-    childIDs: ["6L8Ge1oUa0MOt8DOsjrGNVAVjVv2", "GwUMh0QQm3gHOUDO2qpyoyTsX7c2", "VxbyL8mZSUSbaosnB4lys5kfLqc2", "cq4T8tLSkhQoZ6fjZveGd8cgwTL2"],
-    childNames: ["Alex", "Lindsey", "Deisha", "Maria"],
+    childIDs: ["6L8Ge1oUa0MOt8DOsjrGNVAVjVv2", "GwUMh0QQm3gHOUDO2qpyoyTsX7c2", "VxbyL8mZSUSbaosnB4lys5kfLqc2", "cq4T8tLSkhQoZ6fjZveGd8cgwTL2", "12345"],
+    childNames: ["Alex", "Lindsey", "Deisha", "Maria", "Paulina"],
 }
-
-
-// var ChildVid = [""];
-//function to use child IDs to pull the list of videos
-
 
 function retrieveVideo(uid, index) {
     console.log(uid);
@@ -44,7 +28,7 @@ function displayVideo(fileName, childName) {
         console.log("this is the url");
         console.log(url);
 
-        $(".studentVideoCards").append(`<div class="card ${childName}" id="videoCards" value="${childName}">
+        $(".studentVideoCards").append(`<div class="card ${childName}">
         <div class="card-image">
             <video id="anotherVideo" width="100" height="100" controls><source src="${url}" type="video/mp4"></source></video>
         </div>
@@ -54,7 +38,7 @@ function displayVideo(fileName, childName) {
             </p>
         </div>
         </div>`);
-        // $(`.${childName}`).hide();
+        $(`.${childName}`).hide();
     }
 
     );
@@ -69,34 +53,45 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 }
 
 
-// // $(".studentVideoCards").hide()
+
+$(document).ready(function () {
+
+    for (var i = 0; i < childInfo.childNames.length; i++) {
+        $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large studentVideoButton">${childInfo.childNames[i]}</button>`)
+    }
+
+    $(".studentVideoButton").unbind('click');
+    $(".studentVideoButton").on("click", function () {
+        console.log($(this));
+        var studentName = $(this).text();
+        console.log(studentName);
+
+        $(".card").hide();
+        for (var i = 0; i < childInfo.childNames.length; i++) {
+            if (studentName === childInfo.childNames[i]) {
+                var clickedStudent = childInfo.childNames[i]
+                $(`.${clickedStudent}`).show();
+            }
+        }
+
+    });
+
+});
 
 
 
-// for (var i = 0; i < childInfo.childNames.length; i++) {
-//     $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton">${childInfo.childNames[i]}</button>`)
 
 
-// }
 
-// $("#studentVideoButton").on("click", function () {
-//     $("#videoCards").hide();
-//     console.log($(this));
-//     var studentName = $(this).text();
-//     console.log(studentName);
-//     // console.log($("#videoCards").attr(value));
 
-//     for (var i = 0; i < childInfo.childNames.length; i++) {
-//         if (studentName === childInfo.childNames[i]) {
-//             // $(".studentVideoCards").show();
-//             var clickedStudent = childInfo.childNames[i]
-//             $(`.${clickedStudent}`).show();
-//         } else {
-//             $("#videoCards").hide();
-//         }
-//     }
 
-// });
+
+
+
+
+
+
+
 
 
 

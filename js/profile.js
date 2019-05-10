@@ -1,5 +1,3 @@
-
-
 // set timeout will be replaced in the future
 
 $(document).ready(function () {
