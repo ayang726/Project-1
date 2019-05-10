@@ -116,5 +116,6 @@ function complete() {
 
     setTimeout(() => {
         dismissingModal();
+        $("#modal").modal("close");
     }, 5000);
 }

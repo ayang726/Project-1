@@ -36,7 +36,7 @@ nav .brand-logo {
 
 h5 {
   font-family: "Segoe UI", sans-serif;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .tokenSection {
@@ -51,4 +51,12 @@ video {
 h3 {
   font-family: 'Fredoka One', cursive;
   color: #FF5722;
+}
+
+.footer {
+  position: fixed;
+  width: 180px;
+  height: 60px;
+  bottom: 2px;
+  right: 2px;
 }

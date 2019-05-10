@@ -37,26 +37,23 @@
             <form id="waterform" method="post">
 
                 <div class="formgroup" id="name-form">
-                    <label for="name" style="color: #3f51b5"><b>Your name </b><span
-                            style="color:#FF5722">*</span></label>
-                    <input type="text" id="name" name="name" maxlength="50" />
+                    <label for="name" style="color: #3f51b5"><b>Your name </b><span style="color:#FF5722">*</span></label>
+                    <input type="text" minlength="2" maxlength="50" id="name" name="name" required />
                 </div>
 
                 <div class="formgroup" id="email-form">
-                    <label for="email" style="color: #3f51b5"><b>Your email</b><span
-                            style="color: #FF5722">*</span></label>
-                    <input type="email" id="email" name="email" maxlength="50" />
+                    <label for="email" style="color: #3f51b5"><b>Your email</b><span style="color: #FF5722">*</span></label>
+                    <input type="email" minlength="2" maxlength="50" id="email" name="email" required />
                 </div>
 
                 <div class="formgroup" id="message-form">
                     <label for="message" style="color: #3f51b5"><b>Your message</b></label>
-                    <textarea id="message" name="message" maxlength="5000"></textarea>
+                    <textarea id="message" minlength="2" maxlength="5000" name="message"></textarea>
                     <p style="text-align: left; color: #3f51b5"><span style="color: #FF5722"> *</span> indicates
                         required fields </p>
                 </div>
 
-                <input id="submitButton" type="submit" value="Send your message!" />
-
+                <input type="submit" value="Send your message!" />
             </form>
             <footer class="footer" id="footer">
 

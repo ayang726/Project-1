@@ -1,3 +1,4 @@
+
 // console.log("ALERT ALERT ALERT")
 // console.log(`this is what I want` + firebase.auth());
 // let storageRef = storage.ref('/video').child;
@@ -22,10 +23,10 @@ var childInfo = {
 function retrieveVideo(uid, index) {
     console.log(uid);
     console.log(index);
-    database.ref("/users/" + uid).child("videoList").once("Value", function (s) {
+    database.ref("/users/" + uid).child("videoList").once("value", function (s) {
         s.forEach(video => {
             var fileName = video.val();
-            displayVideo(fileName, childNames[index]);
+            displayVideo(fileName, childInfo.childNames[index]);
         });
     });
 
@@ -45,7 +46,7 @@ function displayVideo(fileName, childName) {
 
         $(".studentVideoCards").append(`<div class="card">
         <div class="card-image">
-            <video id="anotherVideo" width="320" height="240" controls><source src="${url}" type="video/mp4"></source></video>
+            <video id="anotherVideo" width="100" height="100" controls><source src="${url}" type="video/mp4"></source></video>
         </div>
         <div class="card-content">
             <p>
@@ -165,3 +166,4 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 
     // addStudent(storageRef);
 // });
+

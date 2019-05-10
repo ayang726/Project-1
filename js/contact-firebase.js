@@ -20,7 +20,7 @@ $("#submitButton").on("click", function (event) {
         replied: replied
     };
 
-    alert("Your message has been successfully sent📤. We will get back to you soon. Thank you!");
+    //alert("Your message has been successfully sent📤. We will get back to you soon. Thank you!");
 
     // Clears all of the text-boxes
     $("#name").val("");

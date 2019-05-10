@@ -24,7 +24,7 @@
 
 
 
-    <div class="container">
+    <!-- <div class="container">
 
         <div class="row">
             <div class="col s12">
@@ -34,15 +34,22 @@
                     </ul>
                 </div>
             </div>
+        </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="deep-orange-text left-align">User Profile</h3>
+            </div>
         </div>
+    </div>
 
 
 
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
-                <div class="col s12 studentVideoCards">
-                    <div class="card">
+        <div class="row">
+            <div class="col s6 studentVideoCards">
+                <!-- <div class="card">
                         <div class="card-image">
                             <video id="anotherVideo" width="320" height="240" controls>
                                 <source src="" type="video/mp4">
@@ -53,20 +60,23 @@
                                 <div class="card-title" id="name"></div>
                             </p>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
             </div>
         </div>
-
-
-        <footer class="footer" id="footer">
-
-            <!-- footer goes here -->
-
-        </footer>
     </div>
 
+    <footer class="footer" id="footer">
+
+        <!-- footer goes here -->
+
     </footer>
+    <!-- </div> -->
+
+    </footer>
+
+    <style>
+        .studentVideoCards {}
+    </style>
 
     <!-- <video controls id="anotherVideo"></video> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -81,13 +91,12 @@
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#config-web-app -->
-    <script src="/__/firebase/6.0.1/firebase-auth.js"></script>
+
     <script src="js/firebaseInit.js"></script>
-    <!-- <script src="./PTAuth.html"></script> -->
-    <script src="./js/PTprofile.js"></script>
     <script src="./js/userInfo.js"></script>
-    <!-- <script src="./js/profile.js"></script> -->
-    <!-- <script src="./js/congrats.js"></script> -->
+    <script src="./js/PTprofile.js"></script>
+
+
     <!-- <script src="./js/record.js"></script> -->
 
 
@@ -100,6 +109,7 @@
     <!-- <script src="js/generateExcersizeTabs.js"></script> -->
     <!-- <script src="js/modal.js"></script> -->
     <script src="js/generateFooter.js"></script>
+
 
 
 </body>

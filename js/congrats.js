@@ -12,9 +12,8 @@ function congratulate() {
 function celebrate() {
     var api_key = "IXHrCW7HbVSkilRoks118mHFZJi08MKa";
     var rating = "g";
-    var offset = 10;
+    var offset = Math.floor(Math.random() * 100);
     var limit = 1;
-    var q = randomQuery;
     var randomQ = ["minion", "disney", "puppy", "kittens", "peanuts", "balloons", "bugs bunny", "animals", "mickey mouse", "cartoons", "tom and jerry"];
     var randomQuery = getRandomArrayElement(randomQ);
 
@@ -44,7 +43,7 @@ function celebrate() {
 
 function playSound() {
 
-    audioElement.setAttribute("src", "./js/clap-mp3.mp3");
+    audioElement.setAttribute("src", "./Assets/Sound/clap-mp3.mp3");
     audioElement.play();
 };
 
