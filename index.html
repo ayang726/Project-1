@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./css/contact.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
@@ -20,10 +21,9 @@
     <div id="navBar">
     </div>
     <div class="tokenSection">
-
-
         <div class="container">
             <div class="row">
+
                 <ul id="dropdown1" class="dropdown-content">
                     <li value=1 id="one" class="dropDownNumber"><a href="#" class="deep-orange-text">one</a></li>
                     <li value=2 id="two" class="dropDownNumber"><a href="#" class="deep-orange-text">two</a></li>
@@ -37,6 +37,7 @@
                     <div id="tokens" class="col s12 center-align"></div>
             </div>
             <div class="row">
+
                 <div id="tokens" class="col s12 center-align"></div>
             </div>
         </div>
@@ -50,6 +51,10 @@
 
         <div class="container">
             <div class="section">
+                <div class="fish" id="fish"></div>
+                <div class="fish" id="fish2"></div>
+                <div class="fish" id="fish3"></div>
+
                 <div id="modal" class="modal">
                     <div class="modal-content">
                         <div class="slider" id="slider">
@@ -57,7 +62,6 @@
                                 <li>
                                     <!-- <h4>Exercise 1</h4> -->
                                     <div id="youtube-player">
-
                                     </div>
 
                                 </li>
@@ -72,10 +76,10 @@
 
                         <div id="congrats-display"></div>
 
-                        <button onclick="showMe()" class="waves-effect waves-light blue accent-3 btn"><i
-                                class="material-icons right" id="now-you">ondemand_video</i>Show Me</button>
-                        <button onclick="nowYou()" class="waves-effect waves-light blue accent-3 btn"><i
-                                class="material-icons right" id="now-you">accessibility</i>NOW
+                        <button onclick="showMe()" class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
+                                id="now-you">ondemand_video</i>Show Me</button>
+                        <button onclick="nowYou()" class="waves-effect waves-light blue accent-3 btn"><i class="material-icons right"
+                                id="now-you">accessibility</i>NOW
                             YOU!</button>
                         <button onclick="complete()" class="waves-effect waves-light blue accent-3 btn" id="stop"><i
                                 class="material-icons right" id="complete">check</i>Complete!</button>

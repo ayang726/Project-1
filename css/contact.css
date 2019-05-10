@@ -61,13 +61,20 @@ h1 {
 
 #fish {
 	top: 120px;
+	animation-delay: 0s;
 }
 
 #fish2 {
-	top: 260px;
-	animation-delay: 12s;
-	-webkit-animation-delay: 12s;
+	top: 500px;
+	animation-delay: 4s;
+	
 }
+
+#fish3 {
+	top: 800px;
+	animation-delay: 2s;
+}
+
 
 header {
 	height: 160px;
