@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 function displayVideo(fileName) {
     console.log("message140 " + fileName)
-    let storageRef = storage.ref('/video').child(fileName);
+    let storageRef = storage.ref('/video/').child(fileName);
     console.log(storageRef);
     let URL = storageRef.getDownloadURL();
     console.log(URL);

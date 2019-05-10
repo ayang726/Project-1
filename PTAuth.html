@@ -64,9 +64,9 @@
       },
       // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
       signInFlow: 'popup',
-      
+
       // this should lead to PTdashboard;
-      signInSuccessUrl: '#',
+      signInSuccessUrl: './PTprofile.html',
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.EmailAuthProvider.PROVIDER_ID
@@ -80,6 +80,7 @@
     ui.start('#firebaseui-auth-container', uiConfig);
   </script>
   <script src="js/generateCommonParts.js"></script>
+  <script src="./js/PTprofile.js"></script>
 
 </body>
 
