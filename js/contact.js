@@ -1,3 +1,5 @@
+$(".modal").modal();
+
 $('document').ready(function () {
     $('input[type="text"], input[type="email"], textarea').focus(function () {
         var background = $(this).attr('id');
@@ -14,7 +16,8 @@ $('document').ready(function () {
         console.log(field);
     }
 
-    $("#waterform").submit(function () {
+    $("#waterform").submit(function (e) {
+        e.preventDefault();
         var stopsubmit = false;
 
         if ($('#name').val() == "") {
@@ -26,6 +29,31 @@ $('document').ready(function () {
             stopsubmit = true;
         }
         if (stopsubmit) return false;
+
+        // Grabs user input
+        var name = $("#name").val().trim();
+        var emailAdd = $("#email").val().trim();
+        var message = $("#message").val().trim();
+        var replied = "not yet";
+
+        // Creates local "temporary" object for holding train data
+        var newMsg = {
+            name: name,
+            emailAdd: emailAdd,
+            message: message,
+            replied: replied
+        };
+
+        //alert("Your message has been successfully sent📤. We will get back to you soon. Thank you!");
+
+        // Clears all of the text-boxes
+        $("#name").val("");
+        $("#email").val("");
+        $("#message").val("");
+
+        // Uploads employee data to the database
+        database.ref("/users/" + currentUser.uid + "/messages").push(newMsg);
+        $("#submitted").modal("open");
     });
 
 });
