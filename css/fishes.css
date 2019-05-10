@@ -1,0 +1,59 @@
+
+/* Animation webkit */
+
+@-webkit-keyframes myfirst {
+	0% {
+		margin-left: -500px
+	}
+	90% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 100%;
+	}
+}
+
+/* Animation */
+
+@keyframes myfirst {
+	0% {
+		margin-left: -500px
+	}
+	70% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 100%;
+	}
+}
+
+.fish {
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
+	width: 235px;
+	height: 104px;
+	margin-left: -500px;
+	position: absolute;
+	animation: myfirst 24s;
+	-webkit-animation: myfirst 24s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    z-index: -1;
+}
+
+#fish {
+	top: 120px;
+	animation-delay: 0s;
+}
+
+#fish2 {
+	top: 320px;
+	animation-delay: 4s;
+	
+}
+
+#fish3 {
+	top: 520px;
+	animation-delay: 2s;
+}
