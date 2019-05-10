@@ -50,7 +50,7 @@ function displayVideo(fileName, childName) {
         </div>
         <div class="card-content">
             <p>
-                <div class="card-title" id="name">${childName}</div>
+                <div class="card-title indigo-text" id="name">${childName}</div>
             </p>
         </div>
         </div>`);

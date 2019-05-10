@@ -30,7 +30,7 @@ function displayVideo(fileName) {
         </div>
         <div class="card-content">
             <p>
-                <div class="card-title" id="name">${currentUser.displayName}</div>
+                <div class="card-title indigo-text" id="name">${currentUser.displayName}</div>
             </p>
         </div>
     </div>`);
