@@ -11,8 +11,8 @@
 // import * as admin from 'firebase-admin';
 
 var childInfo = {
-    childIDs: ["6L8Ge1oUa0MOt8DOsjrGNVAVjVv2", "GwUMh0QQm3gHOUDO2qpyoyTsX7c2", "VxbyL8mZSUSbaosnB4lys5kfLqc2", "cq4T8tLSkhQoZ6fjZveGd8cgwTL2"],
-    childNames: ["Alex", "Lindsey", "Deisha", "Maria"],
+    childIDs: ["6L8Ge1oUa0MOt8DOsjrGNVAVjVv2", "GwUMh0QQm3gHOUDO2qpyoyTsX7c2", "VxbyL8mZSUSbaosnB4lys5kfLqc2", "cq4T8tLSkhQoZ6fjZveGd8cgwTL2", "12345"],
+    childNames: ["Alex", "Lindsey", "Deisha", "Maria", "Paulina"],
 }
 
 
@@ -54,7 +54,7 @@ function displayVideo(fileName, childName) {
             </p>
         </div>
         </div>`);
-        // $(`.${childName}`).hide();
+        $(`.${childName}`).hide();
     }
 
     );
@@ -71,32 +71,50 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 
 // // $(".studentVideoCards").hide()
 
+$(document).ready(function () {
+
+    for (var i = 0; i < childInfo.childNames.length; i++) {
+        $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large studentVideoButton">${childInfo.childNames[i]}</button>`)
+    }
 
 
-// for (var i = 0; i < childInfo.childNames.length; i++) {
-//     $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton">${childInfo.childNames[i]}</button>`)
 
 
-// }
 
-// $("#studentVideoButton").on("click", function () {
-//     $("#videoCards").hide();
-//     console.log($(this));
-//     var studentName = $(this).text();
-//     console.log(studentName);
-//     // console.log($("#videoCards").attr(value));
+    $(".studentVideoButton").unbind('click');
+    $(".studentVideoButton").on("click", function () {
+        console.log($(this));
+        var studentName = $(this).text();
+        console.log(studentName);
+        // console.log($("#videoCards").attr(value));
 
-//     for (var i = 0; i < childInfo.childNames.length; i++) {
-//         if (studentName === childInfo.childNames[i]) {
-//             // $(".studentVideoCards").show();
-//             var clickedStudent = childInfo.childNames[i]
-//             $(`.${clickedStudent}`).show();
-//         } else {
-//             $("#videoCards").hide();
-//         }
-//     }
+        $(".card").hide();
+        for (var i = 0; i < childInfo.childNames.length; i++) {
+            if (studentName === childInfo.childNames[i]) {
+                // $(".studentVideoCards").show();
+                var clickedStudent = childInfo.childNames[i]
+                $(`.${clickedStudent}`).show();
+            }
+        }
 
-// });
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
