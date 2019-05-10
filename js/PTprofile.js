@@ -44,7 +44,7 @@ function displayVideo(fileName, childName) {
         console.log("this is the url");
         console.log(url);
 
-        $(".studentVideoCards").append(`<div class="card ${childName}" id="videoCards" value="${childName}">
+        $(".studentVideoCards").append(`<div class="card ${childName}">
         <div class="card-image">
             <video id="anotherVideo" width="100" height="100" controls><source src="${url}" type="video/mp4"></source></video>
         </div>
