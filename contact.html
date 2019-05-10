@@ -55,8 +55,20 @@
                         required fields </p>
                 </div>
 
-                <input type="submit" value="Send your message!" />
+                <input id="submitButton" type="submit" value="Send your message!" />
             </form>
+
+            <!-- Modal Structure -->
+            <div id="submitted" class="modal">
+                <div class="modal-content">
+                    <h4>Success</h4>
+                    <p>Your message has been submitted</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close btn-flat waves-effect waves-light deep-orange-text">Awesome!</a>
+                </div>
+            </div>
+
             <footer class="footer" id="footer">
 
                 <!-- footer goes here -->
@@ -79,6 +91,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-storage.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
     <script src="./js/firebaseInit.js"></script>
+    <script src="js/materialize.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
     <script src="./js/userInfo.js"></script>
