@@ -44,7 +44,7 @@ function displayVideo(fileName, childName) {
         console.log("this is the url");
         console.log(url);
 
-        $(".studentVideoCards").append(`<div class="card">
+        $(".studentVideoCards").append(`<div class="card ${childName}" id="videoCards" value="${childName}">
         <div class="card-image">
             <video id="anotherVideo" width="100" height="100" controls><source src="${url}" type="video/mp4"></source></video>
         </div>
@@ -54,9 +54,8 @@ function displayVideo(fileName, childName) {
             </p>
         </div>
         </div>`);
+        $(`.${childName}`).hide();
     }
-
-
 
     );
 }
@@ -68,6 +67,49 @@ for (var i = 0; i < childInfo.childIDs.length; i++) {
 
 
 }
+
+
+// $(".studentVideoCards").hide()
+
+
+
+for (var i = 0; i < childInfo.childNames.length; i++) {
+    $(".studentVideoButtons").append(`<button class="deep-orange waves-effect waves-light btn-large" id="studentVideoButton">${childInfo.childNames[i]}</button>`)
+
+}
+
+$("#studentVideoButton").on("click", function () {
+    $("#videoCards").hide();
+    console.log($(this));
+    var studentName = $(this).text();
+    console.log(studentName);
+    // console.log($("#videoCards").attr(value));
+
+    for (var i = 0; i < childInfo.childNames.length; i++) {
+        if (studentName === childInfo.childNames[i]) {
+            // $(".studentVideoCards").show();
+            var clickedStudent = childInfo.childNames[i]
+            $(`.${clickedStudent}`).show();
+        }
+    }
+
+});
+
+
+
+
+
+
+// for (var i = 0; i < childInfo.childNames.length; i++) {
+//     if (studentName === $("#videoCards").attr(value)) {
+//         $(".studentVideoCards").show();
+//         studentName.show();
+//     }
+// }
+
+
+
+
 
 
 // for (var i = 0; i < childIDs.length; i++) {
