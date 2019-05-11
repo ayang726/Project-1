@@ -61,6 +61,14 @@ h3 {
   right: 2px;
 }
 
+.PTlogin {
+  position: fixed;
+  width: 180px;
+  height: 60px;
+  bottom: 2px;
+  left: 2px;
+
+
 .team p{
   overflow: hidden;
 }
@@ -73,4 +81,5 @@ h3 {
   .team{
     grid-template-columns: 1fr; 
   }
+
 }
