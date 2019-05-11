@@ -68,6 +68,7 @@ h3 {
   bottom: 2px;
   left: 2px;
 
+
 .team p{
   overflow: hidden;
 }
@@ -80,4 +81,5 @@ h3 {
   .team{
     grid-template-columns: 1fr; 
   }
+
 }
