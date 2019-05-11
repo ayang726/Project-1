@@ -15,6 +15,9 @@ function dismissingModal() {
     if (mediaRecorder.state === "recording") {
         mediaRecorder.stop();
     }
+    if (player.getVideoLoadedFraction() !== 0) {
+        player.stopVideo();
+    }
     stopSound();
     //on modal complete
     //pause sound

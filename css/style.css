@@ -60,10 +60,26 @@ h3 {
   bottom: 2px;
   right: 2px;
 }
+
 .PTlogin {
   position: fixed;
   width: 180px;
   height: 60px;
   bottom: 2px;
   left: 2px;
+
+
+.team p{
+  overflow: hidden;
+}
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+@media (max-width: 600px) {
+  .team{
+    grid-template-columns: 1fr; 
+  }
+
 }
