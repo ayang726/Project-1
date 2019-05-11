@@ -10,12 +10,12 @@ var generateExerciseCards = {
     },
 
     thumbnail: {
-        1: 'Assets/Images/Touch_Cheeks.png',
-        2: 'Assets/Images/Clap.png',
-        3: 'Assets/Images/Touch_Head.png',
-        4: 'Assets/Images/Hug.png',
-        5: 'Assets/Images/Touch_Nose.png',
-        6: 'Assets/Images/Touch_Shoulders.png',
+        1: 'Assets/Images/Touch_Cheeks.jpeg',
+        2: 'Assets/Images/Clap.jpeg',
+        3: 'Assets/Images/Touch_Head.jpeg',
+        4: 'Assets/Images/Hug.jpeg',
+        5: 'Assets/Images/Touch_Nose.jpeg',
+        6: 'Assets/Images/Touch_Shoulders.jpeg',
     },
 
     video: {
