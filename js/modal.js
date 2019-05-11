@@ -9,6 +9,7 @@ $('#modal').modal({
 });
 
 
+
 // Open dismiss modals
 function dismissingModal() {
     if (mediaRecorder.state === "recording") {
