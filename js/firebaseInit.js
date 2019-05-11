@@ -3,13 +3,13 @@
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCWUynieHBs00mL9wAydWO3nsMOsGVX-R8",
-    authDomain: "click-counter-harcam-3178e.firebaseapp.com",
-    databaseURL: "https://click-counter-harcam-3178e.firebaseio.com",
-    projectId: "click-counter-harcam-3178e",
-    storageBucket: "click-counter-harcam-3178e.appspot.com",
-    messagingSenderId: "672151007179",
-    appId: "1:672151007179:web:dd623268f38a2ed2"
+    apiKey: "AIzaSyCiYcTLAl-EA0nw2c9Wb7AJ2pCmW_BxLJc",
+    authDomain: "harcam-project-01.firebaseapp.com",
+    databaseURL: "https://harcam-project-01.firebaseio.com",
+    projectId: "harcam-project-01",
+    storageBucket: "harcam-project-01.appspot.com",
+    messagingSenderId: "430276248145",
+    appId: "1:430276248145:web:fbc66731a52da2b0"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
