@@ -1,6 +1,6 @@
 
 var childInfo = {
-    childIDs: ["6L8Ge1oUa0MOt8DOsjrGNVAVjVv2", "GwUMh0QQm3gHOUDO2qpyoyTsX7c2", "VxbyL8mZSUSbaosnB4lys5kfLqc2", "cq4T8tLSkhQoZ6fjZveGd8cgwTL2", "12345"],
+    childIDs: ["zIqLxx6R4gOfIJ6B40kr44oLNwm2", "123", "455", "cROIg9Rj9RQosUPb896zTuy2xau1", "ogvLLVsm5uhbHsPsd2y7rG9ubsi1"],
     childNames: ["Alex", "Lindsey", "Deisha", "Maria", "Paulina"],
 }
 
